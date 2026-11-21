@@ -46,10 +46,10 @@ export default function Testimonials() {
 
         {/* Heading */}
         <div className="text-center mb-10">
-          <span className="inline-flex items-center bg-[#fbaf1b]/15 text-[#fbaf1b] text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">
+          <span className="inline-flex items-center bg-[#162544] text-white text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-md mb-3">
             Student Stories
           </span>
-          <h2 className="text-3xl font-black text-[#0b1a37]">Alumni Testimonials</h2>
+          <h2 className="text-3xl font-bold text-[#0b1a37]">Alumni Testimonials</h2>
           <div className="w-16 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-3"></div>
         </div>
 
@@ -58,7 +58,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div key={t.name} className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex flex-col gap-4 hover:shadow-md transition-shadow">
               {/* Quote mark */}
-              <span className="text-4xl font-black text-[#fbaf1b] leading-none">"</span>
+              <span className="text-4xl font-bold text-[#fbaf1b] leading-none">"</span>
 
               {/* Text */}
               <p className="text-gray-600 text-sm leading-relaxed flex-1">{t.text}</p>
@@ -80,3 +80,7 @@ export default function Testimonials() {
     </section>
   );
 }
+
+
+
+

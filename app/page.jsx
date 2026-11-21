@@ -8,14 +8,14 @@ import {
 } from 'lucide-react';
 
 const services = [
-  { Icon: Search,         title: 'University Selection',     desc: 'Expert guidance to find the right university based on your profile, budget, and career goals.' },
-  { Icon: FileText,       title: 'Admission Application',    desc: 'Complete support in preparing and submitting strong university applications with zero errors.' },
-  { Icon: Plane,          title: 'Visa Assistance',          desc: 'Step-by-step visa file preparation, documentation, and mock interview coaching for high success.' },
-  { Icon: BookMarked,     title: 'Scholarship Guidance',     desc: 'We identify and help you apply for scholarships and funding opportunities at top universities.' },
-  { Icon: Languages,      title: 'English Test Preparation', desc: 'IELTS, TOEFL, and PTE preparation with our experienced tutors for the scores you need.' },
-  { Icon: Award,          title: 'Credential Evaluation',    desc: 'Professional evaluation and verification of your academic documents for international recognition.' },
-  { Icon: Building2,      title: 'Accommodation Support',    desc: 'Assistance in finding safe, affordable student accommodation near your university campus.' },
-  { Icon: HeartHandshake, title: 'Pre-Departure Briefing',   desc: 'Detailed orientation covering travel, banking, culture, and life at your destination.' },
+  { Icon: Search,         title: 'University Selection & Guidance',      desc: 'We help you choose the right universities and handle accommodation, travel, and pre-departure preparations for a smooth transition.' },
+  { Icon: FileText,       title: 'Admissions & Interview Preparation',   desc: 'Our consultants and admissions officers work together to create strong applications and provide top guidance for interview preparation, setting students up for success.' },
+  { Icon: Award,          title: 'Scholarships at Top Universities',     desc: 'We partner with top UK universities to secure scholarships for our students, easing the path to studying abroad.' },
+  { Icon: Plane,          title: 'Visa & Immigration Support',           desc: 'Our dedicated team at headquarters will help you secure your study visa for your chosen field, ensuring a smooth application process.' },
+  { Icon: Languages,      title: 'Test Preparation',                     desc: 'With our comprehensive approach to test preparation, we help you achieve optimal scores on language proficiency tests such as the IELTS, LanguageCert, PTE, and others.' },
+  { Icon: Building2,      title: 'Post-Study Work Opportunities',        desc: 'We provide expert guidance on post-study work opportunities through our global network, helping you maximise your career prospects after graduating.' },
+  { Icon: BookMarked,     title: 'Accommodation Support',                desc: 'Assistance in finding safe, affordable student accommodation near your university campus for a comfortable student life.' },
+  { Icon: HeartHandshake, title: 'Pre-Departure Briefing',               desc: 'Detailed orientation covering travel, banking, culture, and life at your destination so you are fully prepared before you go.' },
 ];
 
 const aboutCards = [
@@ -93,27 +93,27 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <HeroVideo />
           <div className="absolute inset-0"
-            style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.90) 0%, rgba(8,15,36,0.75) 40%, rgba(8,15,36,0.20) 100%)' }} />
+            style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.75) 0%, rgba(8,15,36,0.65) 35%, rgba(8,15,36,0.15) 60%, rgba(8,15,36,0.0) 100%)' }} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20">
           <div className="max-w-lg">
-            <p className="text-sm font-semibold text-white mb-3">
-              Welcome and <span className="text-white font-bold" style={{ textDecoration: 'underline', textDecorationColor: '#fbaf1b', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>Join Us for Success</span>
+            <p className="hero-text-1 text-sm font-semibold text-white mb-3">
+              Welcome and <span className="text-white font-semibold" style={{ textDecoration: 'underline', textDecorationColor: '#fbaf1b', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>Join Us for Success</span>
             </p>
-            <h1 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-5 drop-shadow-lg">
+            <h1 style={{ fontSize: '44px', lineHeight: '58px', color: '#ffffff', fontWeight: '700' }} className="hero-text-2 mb-5 drop-shadow-lg">
               Your Gateway to<br />Studying Abroad
             </h1>
-            <p className="text-gray-300 text-sm lg:text-base leading-relaxed mb-8 max-w-md">
+            <p className="hero-text-3 text-gray-300 text-sm lg:text-base leading-relaxed mb-8 max-w-md">
               We provide a complete admissions service for Australia, Canada, Europe, UK, USA and other countries.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="hero-text-4 flex flex-wrap gap-3">
               <a href="https://globalgroupofeducationportal.com/partner-registration" target="_blank" rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-[#fbaf1b] text-[#0b1530] font-bold text-sm px-6 py-3 rounded-md hover:bg-yellow-400 transition-colors shadow-lg">
-                <Users size={16} /> Be a Partner
+                className="inline-flex items-center gap-2 bg-[#fbaf1b] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#162544] hover:text-white transition-colors">
+                <Users size={15} /> Be a Partner
               </a>
               <a href="https://globalgroupofeducationportal.com/student-registration" target="_blank" rel="noreferrer"
-                className="inline-flex items-center gap-2 border-2 border-white/75 text-white font-bold text-sm px-6 py-3 rounded-md hover:bg-white/10 transition-colors">
-                <GraduationCap size={16} /> Be a Student
+                className="inline-flex items-center gap-2 bg-white/10 border border-white text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#162544] hover:border-[#162544] transition-colors">
+                <GraduationCap size={15} /> Be a Student
               </a>
             </div>
           </div>
@@ -124,10 +124,10 @@ export default function HomePage() {
       <section id="about-section" className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 bg-[#fbaf1b]/15 text-[#fbaf1b] text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-5">
+            <span className="inline-flex items-center gap-2 bg-[#162544] text-white text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5">
               <GraduationCap size={13} /> Complete Education Ecosystem
             </span>
-            <h2 className="text-4xl lg:text-5xl font-black text-[#0b1a37] leading-tight">
+            <h2 className="text-4xl lg:text-5xl font-semibold text-[#0b1a37] leading-tight">
               GLOBAL ADMISSIONS &amp; <span className="text-[#fbaf1b]">CONSULTANCY</span>
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
@@ -152,27 +152,22 @@ export default function HomePage() {
 
                 {/* Text */}
                 <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs font-black text-[#fbaf1b] tracking-widest">{c.num}</span>
-                    <div className="h-px w-8 bg-[#fbaf1b]"></div>
-                    <span className="text-xs font-bold tracking-widest uppercase text-[#fbaf1b]">{c.tag}</span>
-                  </div>
-                  <h3 className="text-3xl font-black text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
-                  <p className="text-sm font-bold text-gray-600 mb-3">{c.sub}</p>
+                  <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
+                  <p className="text-sm font-semibold text-gray-600 mb-3">{c.sub}</p>
                   <p className="text-gray-500 text-sm leading-relaxed mb-5">{c.desc}</p>
                   <div className="flex flex-wrap gap-2 mb-5">
                     {c.tags.map(t => (
-                      <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">{t}</span>
+                      <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md hover:bg-[#fbaf1b] hover:text-white hover:border-[#fbaf1b] transition-colors cursor-default">{t}</span>
                     ))}
                   </div>
                   {c.external ? (
                     <a href={c.btnHref} target="_blank" rel="noreferrer"
-                      className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                      className="inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
                       {c.btn} <ArrowRight size={14} />
                     </a>
                   ) : (
                     <Link href={c.btnHref}
-                      className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                      className="inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
                       {c.btn} <ArrowRight size={14} />
                     </Link>
                   )}
@@ -190,40 +185,29 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="bg-gray-50 py-12">
+      <section className="bg-[#0b1a37] py-14">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-8">
 
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
-              <div>
-                <span className="inline-flex items-center gap-1.5 bg-[#fbaf1b]/15 text-[#fbaf1b] text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">
-                  ★ What We Offer
-                </span>
-                <h2 className="text-4xl font-black text-black leading-tight">
-                  Our Services,<br />
-                  <span className="text-gray-400">Study Smarter.</span>
-                </h2>
-              </div>
-              <p className="text-gray-500 text-sm leading-relaxed max-w-sm lg:text-right">
-                We help students achieve their dream of studying abroad by providing expert guidance, university selection, and complete admission support every step of the way.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-              {services.map((s) => (
-                <div key={s.title} className="group border border-[#fbaf1b]/30 rounded-lg p-5 hover:shadow-md hover:-translate-y-1 transition-all bg-white">
-                  <div className="w-11 h-11 rounded-lg bg-[#102771]/10 flex items-center justify-center mb-3 group-hover:bg-[#fbaf1b] transition-colors">
-                    <s.Icon size={20} className="text-[#102771] group-hover:text-white transition-colors" />
-                  </div>
-                  <h3 className="text-sm font-bold text-[#102771] mb-1">{s.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">{s.desc}</p>
-                </div>
-              ))}
-            </div>
-
-          
-
+          {/* Heading */}
+          <div className="text-center mb-10">
+            <h2 className="text-white font-semibold mb-2">Services</h2>
+            <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mb-4"></div>
+            <p className="text-gray-400 text-sm">Global Group of Education helps you get admission in your preferred university.</p>
           </div>
+
+          {/* Cards grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((s) => (
+              <div key={s.title} className="group bg-[#162544] rounded-xl p-6 hover:bg-[#1e3a6e] transition-colors cursor-default">
+                <div className="w-12 h-12 rounded-lg bg-[#0b1a37] flex items-center justify-center mb-4">
+                  <s.Icon size={22} className="text-white" />
+                </div>
+                <h3 className="text-white font-semibold text-sm mb-2">{s.title}</h3>
+                <p className="text-gray-400 text-xs leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
@@ -232,3 +216,9 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+
+
+
+

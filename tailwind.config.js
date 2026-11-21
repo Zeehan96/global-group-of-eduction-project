@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Rubik', 'sans-serif'],
+      },
       colors: {
         brand: {
           navy:   '#102771',
@@ -13,9 +16,6 @@ module.exports = {
           gold:   '#fbaf1b',
           light:  '#f8fafc',
         },
-      },
-      fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },

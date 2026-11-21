@@ -1,6 +1,13 @@
 import './globals.css';
+import { Rubik } from 'next/font/google';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  display: 'swap',
+});
 
 export const metadata = {
   title: 'Global Group of Education | Study Abroad Consultants',
@@ -12,7 +19,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={rubik.className}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

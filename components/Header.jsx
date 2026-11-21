@@ -45,7 +45,7 @@ export default function Header() {
         href={href}
         onClick={onClick || close}
         className={`flex items-center gap-1.5 px-3 py-2 text-sm font-semibold transition-colors
-          ${active ? 'text-[#fbaf1b] border-b-2 border-[#fbaf1b]' : 'text-[#162447] hover:text-[#fbaf1b]'}`}
+          ${active ? 'text-[#fbaf1b] ' : 'text-[#162447] hover:text-[#fbaf1b]'}`}
       >
         <Icon size={15} />
         {label}
@@ -62,7 +62,7 @@ export default function Header() {
 
           {/* Logo */}
           <Link href="/" onClick={close} className="flex-shrink-0">
-            <img src="/assets/logo.png" alt="Global Group of Education" className="h-11 w-auto object-contain" />
+            <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-11 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
@@ -197,3 +197,4 @@ export default function Header() {
     </>
   );
 }
+

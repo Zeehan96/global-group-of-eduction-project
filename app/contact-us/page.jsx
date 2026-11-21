@@ -18,10 +18,10 @@ export default function ContactUsPage() {
       {/* Banner */}
       <div className="bg-[#0b1a37] py-16 text-white text-center">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <span className="inline-flex items-center bg-[#fbaf1b]/15 text-[#fbaf1b] text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+          <span className="inline-flex items-center bg-[#162544] text-white text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
             Get In Touch
           </span>
-          <h1 className="text-5xl font-black mt-2">Contact Us</h1>
+          <h1 className="text-5xl font-bold mt-2">Contact Us</h1>
           <div className="w-16 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-4 mb-4"></div>
           <p className="text-gray-400 text-sm max-w-xl mx-auto">
             Reach out to our expert team for 100% free counselling, university selection, and visa guidance.
@@ -34,7 +34,7 @@ export default function ContactUsPage() {
 
           {/* ── Contact Form ── */}
           <div className="bg-white rounded-xl border border-gray-100 shadow-sm px-8 py-8">
-            <h2 className="text-2xl font-black text-[#0b1a37] mb-6">CONTACT WITH US</h2>
+            <h2 className="text-2xl font-bold text-[#0b1a37] mb-6">CONTACT WITH US</h2>
 
             {submitted ? (
               <div className="text-center py-10">
@@ -98,7 +98,7 @@ export default function ContactUsPage() {
             {/* Pakistan Office */}
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
               <div className="px-6 py-5 border-b border-gray-50">
-                <h3 className="text-xl font-black text-[#0b1a37] mb-3">PAKISTAN OFFICE ADDRESS:</h3>
+                <h3 className="text-xl font-bold text-[#0b1a37] mb-3">PAKISTAN OFFICE ADDRESS:</h3>
                 <p className="text-sm font-bold text-[#0b1a37]">Global Group of Education</p>
                 <p className="text-sm font-bold text-[#0b1a37] mb-2">Pakistan Office</p>
                 <p className="text-sm text-gray-600 mb-1">Building no 278, High Street, Sahiwal, Punjab, Pakistan.</p>
@@ -123,7 +123,7 @@ export default function ContactUsPage() {
             {/* UK Office */}
             <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
               <div className="px-6 py-5 border-b border-gray-50">
-                <h3 className="text-xl font-black text-[#0b1a37] mb-3">UK OFFICE ADDRESS:</h3>
+                <h3 className="text-xl font-bold text-[#0b1a37] mb-3">UK OFFICE ADDRESS:</h3>
                 <p className="text-sm font-bold text-[#0b1a37]">Global Group of Education</p>
                 <p className="text-sm font-bold text-[#0b1a37] mb-2">UK Office</p>
                 <p className="text-sm text-gray-600 mb-1">Level 18, 40 Bank Street, Canary Wharf, London, E14 5NR, United Kingdom.</p>
@@ -154,4 +154,8 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
+
+
+
 

@@ -157,10 +157,10 @@ export default function TermsPage() {
       {/* Banner */}
       <div className="bg-[#0b1a37] py-16 text-white text-center">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <span className="inline-flex items-center bg-[#fbaf1b]/15 text-[#fbaf1b] text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+          <span className="inline-flex items-center bg-[#162544] text-white text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
             Legal
           </span>
-          <h1 className="text-5xl font-black mt-2">Terms and Conditions</h1>
+          <h1 className="text-5xl font-bold mt-2">Terms and Conditions</h1>
           {/* Gold underline */}
           <div className="w-16 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-4 mb-4"></div>
           <p className="text-gray-400 text-sm max-w-2xl mx-auto">
@@ -176,7 +176,7 @@ export default function TermsPage() {
             {sections.map((s) => (
               <div key={s.num} className="pb-4 border-b border-gray-100 last:border-0 last:pb-0">
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl font-black text-black mr-2">{s.num}.</span>
+                  <span className="text-2xl font-bold text-black mr-2">{s.num}.</span>
                   <h2 className="text-2xl font-bold text-black">{s.title}</h2>
                 </div>
                 {s.content.split('\n\n').map((para, i) => (
@@ -207,4 +207,8 @@ export default function TermsPage() {
     </div>
   );
 }
+
+
+
+
 
