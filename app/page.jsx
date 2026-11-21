@@ -25,7 +25,7 @@ const aboutCards = [
     sub: '10+ Years of Excellence & Trusted Guidance',
     desc: 'In this era of educational competition, Global Group of Education brings you the finest consultants to help you achieve your desired degree from one of the best institutes in the UK and world top-ranked universities.',
     tags: ['10+ Years Experience','98% Visa Success Rate','30+ Partner Universities','5000+ Students Placed'],
-    btn: 'Learn More', btnHref: '/about-us', external: false,
+    btn: 'Explore Our Portal', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: '/assets/images/steps.jpg', imgRight: true,
   },
   {
@@ -43,7 +43,7 @@ const aboutCards = [
     sub: 'Merit & Need-Based Funding up to £10,000',
     desc: 'We partner directly with leading universities in the UK, USA, Canada, and Australia to secure lucrative scholarships for our students, easing the financial path to studying abroad.',
     tags: ['UK Vice-Chancellor Awards','USA Merit Scholarships','Canada Dean Grants','Partial & Full Awards'],
-    btn: 'Find Scholarships', btnHref: '/our-services', external: false,
+    btn: 'Find Scholarships', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: '/assets/images/cources-bg1.jpg', imgRight: true,
   },
   {
