@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Testimonials from '../components/Testimonials';
+import HeroVideo from '../components/HeroVideo';
 import {
   Users, GraduationCap, ArrowRight,
   Search, FileText, Plane, BookMarked, Languages, Award, Building2, HeartHandshake,
@@ -90,10 +91,7 @@ export default function HomePage() {
       {/* ── 1. Hero ── */}
       <section className="relative overflow-hidden bg-[#0b1a37]" style={{ minHeight: '420px' }}>
         <div className="absolute inset-0 z-0">
-          <video autoPlay loop muted playsInline
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover brightness-75">
-            <source src="/assets/videos/7252806-hd_1920_1080_25fps.mp4" type="video/mp4" />
-          </video>
+          <HeroVideo />
           <div className="absolute inset-0"
             style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.90) 0%, rgba(8,15,36,0.75) 40%, rgba(8,15,36,0.20) 100%)' }} />
         </div>
