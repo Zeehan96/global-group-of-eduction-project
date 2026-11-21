@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
   Home, Globe, BookOpen, Handshake, Info, Phone,
-  ChevronDown, ChevronUp, Flag, Menu, X, User,
+  ChevronDown, ChevronUp, Flag, Menu, X, User, ArrowUpRight,
 } from 'lucide-react';
 
 const destinations = [
@@ -45,12 +45,9 @@ export default function Header() {
         href={href}
         onClick={onClick || close}
         className={`flex items-center gap-1.5 px-3 py-2 text-sm font-semibold transition-colors
-          ${active
-            ? 'text-[#fbaf1b] border-b-2 border-[#fbaf1b]'
-            : 'text-[#162447] hover:text-[#fbaf1b]'
-          }`}
+          ${active ? 'text-[#fbaf1b] border-b-2 border-[#fbaf1b]' : 'text-[#162447] hover:text-[#fbaf1b]'}`}
       >
-        <Icon size={15} className={active ? 'text-[#fbaf1b]' : 'text-[#162447]'} />
+        <Icon size={15} />
         {label}
       </Link>
     );
@@ -73,7 +70,6 @@ export default function Header() {
 
             {navLink('/', Home, 'Home')}
 
-            {/* Study Destinations dropdown */}
             <div
               className="relative"
               onMouseEnter={() => setDropOpen(true)}
@@ -81,7 +77,7 @@ export default function Header() {
             >
               <button
                 onClick={() => setDropOpen(!dropOpen)}
-                className={`flex items-center gap-1.5 px-3 py-2 text-sm font-semibold rounded transition-colors
+                className={`flex items-center gap-1.5 px-3 py-2 text-sm font-semibold transition-colors
                   ${isDestActive ? 'text-[#fbaf1b] border-b-2 border-[#fbaf1b]' : 'text-[#162447] hover:text-[#fbaf1b]'}`}
               >
                 <Globe size={15} />
@@ -93,11 +89,8 @@ export default function Header() {
                 <ul className="absolute top-full left-0 w-56 bg-white border border-gray-200 border-t-4 border-t-[#fbaf1b] rounded-b-xl shadow-xl py-2 z-50">
                   {destinations.map((d) => (
                     <li key={d.href}>
-                      <Link
-                        href={d.href}
-                        onClick={close}
-                        className="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-[#162447] hover:bg-gray-50 hover:pl-5 transition-all"
-                      >
+                      <Link href={d.href} onClick={close}
+                        className="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-[#162447] hover:bg-gray-50 hover:pl-5 transition-all">
                         <Flag size={12} className="text-[#162447]" />
                         {d.label}
                       </Link>
@@ -108,7 +101,7 @@ export default function Header() {
             </div>
 
             {navLink('https://globalgroupofeducationportal.com/courseFinder/index?access=pass', BookOpen, 'Courses')}
-            {navLink('/our-services', Handshake, 'Our Services')}
+            {navLink('/#about-section', Handshake, 'Our Services')}
             {navLink('/about-us', Info, 'About Us')}
             {navLink('/contact-us', Phone, 'Contact Us')}
           </nav>
@@ -119,8 +112,8 @@ export default function Header() {
               href="https://globalgroupofeducationportal.com/login"
               className="flex items-center gap-2 bg-[#162544] text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-[#0d172a] transition-colors"
             >
-              <User size={14} className="text-[#fbaf1b]" />
               <span>Login</span>
+              <ArrowUpRight size={14} className="text-white" />
             </Link>
 
             <button
@@ -141,19 +134,14 @@ export default function Header() {
 
               {[
                 { href: '/', Icon: Home, label: 'Home' },
-                { href: '/our-services', Icon: Handshake, label: 'Our Services' },
+                { href: '/#about-section', Icon: Handshake, label: 'Our Services' },
                 { href: '/about-us', Icon: Info, label: 'About Us' },
                 { href: '/contact-us', Icon: Phone, label: 'Contact Us' },
               ].map(({ href, Icon, label }) => (
                 <li key={href} className="border-b border-gray-50">
-                  <Link
-                    href={href}
-                    onClick={close}
+                  <Link href={href} onClick={close}
                     className={`flex items-center gap-3 px-5 py-3.5 text-sm font-semibold transition-colors
-                      ${isActive(href)
-                        ? 'text-[#fbaf1b] border-l-4 border-[#fbaf1b] bg-gray-50'
-                        : 'text-[#162447] hover:bg-gray-50'}`}
-                  >
+                      ${isActive(href) ? 'text-[#fbaf1b] border-l-4 border-[#fbaf1b] bg-gray-50' : 'text-[#162447] hover:bg-gray-50'}`}>
                     <Icon size={15} />
                     {label}
                   </Link>

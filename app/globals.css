@@ -5,6 +5,31 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Page enter animation — slides in from top */
+  main {
+    animation: pageEnter 0.35s ease forwards;
+  }
+  @keyframes pageEnter {
+    from {
+      opacity: 0;
+      transform: translateY(-16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Last sticky card — no shadow */
+.sticky-cards > div:last-child {
+  box-shadow: none !important;
+}
+
+@layer base {
   * {
     font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
     box-sizing: border-box;

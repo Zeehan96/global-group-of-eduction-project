@@ -1,16 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
+import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import Testimonials from '../../components/Testimonials';
 
 export default function ContactUsPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    destination: 'United Kingdom',
-    studyLevel: 'Undergraduate',
-    message: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
@@ -21,220 +16,142 @@ export default function ContactUsPage() {
   return (
     <div>
       {/* Banner */}
-      <div
-        style={{
-          background: 'linear-gradient(rgba(16, 39, 113, 0.88), rgba(16, 39, 113, 0.95)), url(/uploads/cont.jpg) center/cover no-repeat',
-          padding: '75px 0',
-          color: '#ffffff',
-          textAlign: 'center',
-        }}
-      >
-        <div className="container">
-          <span style={{ color: '#fbaf1b', fontWeight: '800', letterSpacing: '1.5px', textTransform: 'uppercase', fontSize: '13px' }}>
-            GET IN TOUCH
+      <div className="bg-[#0b1a37] py-16 text-white text-center">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <span className="inline-flex items-center bg-[#fbaf1b]/15 text-[#fbaf1b] text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-4">
+            Get In Touch
           </span>
-          <h1 style={{ fontSize: '38px', fontWeight: '800', marginTop: '10px' }}>
-            Contact Us &amp; Free Assessment
-          </h1>
-          <p style={{ maxWidth: '700px', margin: '15px auto 0', color: '#cbd5e1', fontSize: '16px' }}>
-            Have questions about studying abroad? Reach out to our expert team for 100% free counselling and visa guidance.
+          <h1 className="text-5xl font-black mt-2">Contact Us</h1>
+          <div className="w-16 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-4 mb-4"></div>
+          <p className="text-gray-400 text-sm max-w-xl mx-auto">
+            Reach out to our expert team for 100% free counselling, university selection, and visa guidance.
           </p>
         </div>
       </div>
 
-      {/* Main Contact Section */}
-      <section style={{ padding: '70px 0', background: '#f8fafc' }}>
-        <div className="container">
-          <div className="row">
-            {/* Contact Information & Office Cards */}
-            <div className="col-md-5">
-              <div style={{ background: '#ffffff', padding: '35px', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.04)', marginBottom: '30px' }}>
-                <h3 style={{ fontSize: '22px', fontWeight: '800', color: '#102771', marginBottom: '20px' }}>
-                  UK Head Office
-                </h3>
+      <section className="bg-gray-50 py-14">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col gap-10">
 
-                <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
-                  <i className="fa fa-map-marker" style={{ fontSize: '22px', color: '#fbaf1b', marginTop: '3px' }}></i>
+          {/* ── Contact Form ── */}
+          <div className="bg-white rounded-xl border border-gray-100 shadow-sm px-8 py-8">
+            <h2 className="text-2xl font-black text-[#0b1a37] mb-6">CONTACT WITH US</h2>
+
+            {submitted ? (
+              <div className="text-center py-10">
+                <div className="w-14 h-14 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-4">
+                  <Send size={24} className="text-green-600" />
+                </div>
+                <h3 className="text-xl font-bold text-green-700 mb-2">Message Sent!</h3>
+                <p className="text-gray-500 text-sm mb-4">Our team will contact you shortly.</p>
+                <button onClick={() => setSubmitted(false)}
+                  className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                  Send Another
+                </button>
+              </div>
+            ) : (
+              <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   <div>
-                    <strong style={{ color: '#1a2744', display: 'block', marginBottom: '4px' }}>London Office:</strong>
-                    <span style={{ color: '#64748b', fontSize: '14px', lineHeight: '1.6' }}>
-                      Level 18, 40 Bank Street, Canary Wharf, London, E14 5NR, United Kingdom
-                    </span>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Full Name:</label>
+                    <input type="text" required placeholder="NAME"
+                      value={formData.name} onChange={e => setFormData({...formData, name: e.target.value})}
+                      className="w-full bg-gray-100 border-0 rounded-md px-4 py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#162544]" />
                   </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
-                  <i className="fa fa-phone" style={{ fontSize: '20px', color: '#fbaf1b', marginTop: '3px' }}></i>
                   <div>
-                    <strong style={{ color: '#1a2744', display: 'block', marginBottom: '4px' }}>Phone / WhatsApp:</strong>
-                    <a href="https://wa.me/447586589659" target="_blank" rel="noreferrer" style={{ color: '#102771', fontSize: '14px', fontWeight: '600' }}>
-                      +44 7586589659
-                    </a>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Email:</label>
+                    <input type="email" required placeholder="EMAIL"
+                      value={formData.email} onChange={e => setFormData({...formData, email: e.target.value})}
+                      className="w-full bg-gray-100 border-0 rounded-md px-4 py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#162544]" />
                   </div>
-                </div>
-
-                <div style={{ display: 'flex', gap: '15px', marginBottom: '20px' }}>
-                  <i className="fa fa-envelope" style={{ fontSize: '18px', color: '#fbaf1b', marginTop: '3px' }}></i>
                   <div>
-                    <strong style={{ color: '#1a2744', display: 'block', marginBottom: '4px' }}>Email Address:</strong>
-                    <a href="mailto:london@globalgroupofeducation.com" style={{ color: '#102771', fontSize: '14px', fontWeight: '600' }}>
-                      london@globalgroupofeducation.com
-                    </a>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Phone Number:</label>
+                    <input type="tel" required placeholder="PHONE NUMBER"
+                      value={formData.phone} onChange={e => setFormData({...formData, phone: e.target.value})}
+                      className="w-full bg-gray-100 border-0 rounded-md px-4 py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#162544]" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-1">Subject:</label>
+                    <input type="text" required placeholder="SUBJECT"
+                      value={formData.subject} onChange={e => setFormData({...formData, subject: e.target.value})}
+                      className="w-full bg-gray-100 border-0 rounded-md px-4 py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#162544]" />
                   </div>
                 </div>
+                <div>
+                  <label className="block text-sm font-semibold text-gray-700 mb-1">Message:</label>
+                  <textarea rows={5} placeholder="MESSAGE"
+                    value={formData.message} onChange={e => setFormData({...formData, message: e.target.value})}
+                    className="w-full bg-gray-100 border-0 rounded-md px-4 py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#162544] resize-none" />
+                </div>
+                <div>
+                  <button type="submit"
+                    className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-4 py-2 rounded-md hover:bg-[#0d172a] transition-colors">
+                    SUBMIT <Send size={14} />
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
 
-                <div style={{ marginTop: '30px', paddingTop: '20px', borderTop: '1px solid #f1f5f9' }}>
-                  <h4 style={{ fontSize: '16px', fontWeight: '700', color: '#1a2744', marginBottom: '12px' }}>
-                    Connect on Social Media:
-                  </h4>
-                  <div style={{ display: 'flex', gap: '10px' }}>
-                    <a href="https://www.facebook.com/Globalgroupofeducation-101786341409358/" target="_blank" rel="noreferrer" className="btn btn-default" style={{ color: '#1877f2' }}>
-                      <i className="fa fa-facebook"></i> Facebook
-                    </a>
-                    <a href="https://wa.me/447586589659" target="_blank" rel="noreferrer" className="btn btn-default" style={{ color: '#25D366' }}>
-                      <i className="fa fa-whatsapp"></i> WhatsApp
-                    </a>
-                  </div>
+          {/* ── Office Maps ── */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            {/* Pakistan Office */}
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-6 py-5 border-b border-gray-50">
+                <h3 className="text-xl font-black text-[#0b1a37] mb-3">PAKISTAN OFFICE ADDRESS:</h3>
+                <p className="text-sm font-bold text-[#0b1a37]">Global Group of Education</p>
+                <p className="text-sm font-bold text-[#0b1a37] mb-2">Pakistan Office</p>
+                <p className="text-sm text-gray-600 mb-1">Building no 278, High Street, Sahiwal, Punjab, Pakistan.</p>
+                <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
+                  <Mail size={13} className="text-[#fbaf1b]" />
+                  <a href="mailto:pakistan@globalgroupofeducation.com" className="hover:text-[#fbaf1b] transition-colors">pakistan@globalgroupofeducation.com</a>
                 </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <Phone size={13} className="text-[#fbaf1b]" />
+                  <a href="tel:+923233303333" className="hover:text-[#fbaf1b] transition-colors">+923233303333</a>
+                </div>
+              </div>
+              <div className="h-72">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.9!2d73.1066!3d30.6697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3922b7b9e3e3e3e3%3A0x3e3e3e3e3e3e3e3e!2sGlobal%20Group%20of%20Education!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s"
+                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade" title="Pakistan Office">
+                </iframe>
               </div>
             </div>
 
-            {/* Assessment & Inquiry Form */}
-            <div className="col-md-7">
-              <div style={{ background: '#ffffff', padding: '40px', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.04)' }}>
-                <h3 style={{ fontSize: '24px', fontWeight: '800', color: '#102771', marginBottom: '8px' }}>
-                  Online Admission Assessment Form
-                </h3>
-                <p style={{ color: '#64748b', fontSize: '14px', marginBottom: '25px' }}>
-                  Fill in your details and an education consultant will review your profile and respond within 24 hours.
-                </p>
-
-                {submitted ? (
-                  <div style={{ padding: '30px', background: '#ecfdf5', border: '1px solid #10b981', borderRadius: '10px', textAlign: 'center' }}>
-                    <i className="fa fa-check-circle" style={{ fontSize: '48px', color: '#10b981', marginBottom: '15px' }}></i>
-                    <h3 style={{ color: '#065f46', fontWeight: '800', margin: '0 0 10px 0' }}>Thank You!</h3>
-                    <p style={{ color: '#047857', fontSize: '15px' }}>
-                      Your inquiry has been submitted successfully. One of our admission advisors will contact you shortly.
-                    </p>
-                    <button
-                      className="btn btn-default"
-                      onClick={() => setSubmitted(false)}
-                      style={{ marginTop: '15px', fontWeight: '600' }}
-                    >
-                      Submit Another Inquiry
-                    </button>
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit}>
-                    <div className="row">
-                      <div className="col-sm-6 form-group">
-                        <label style={{ fontWeight: '600', color: '#334155' }}>Full Name *</label>
-                        <input
-                          type="text"
-                          required
-                          className="form-control"
-                          placeholder="Your name"
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          style={{ height: '45px', borderRadius: '6px' }}
-                        />
-                      </div>
-                      <div className="col-sm-6 form-group">
-                        <label style={{ fontWeight: '600', color: '#334155' }}>Email Address *</label>
-                        <input
-                          type="email"
-                          required
-                          className="form-control"
-                          placeholder="name@example.com"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          style={{ height: '45px', borderRadius: '6px' }}
-                        />
-                      </div>
-                    </div>
-
-                    <div className="row">
-                      <div className="col-sm-6 form-group">
-                        <label style={{ fontWeight: '600', color: '#334155' }}>Phone / WhatsApp Number *</label>
-                        <input
-                          type="tel"
-                          required
-                          className="form-control"
-                          placeholder="+44 7586589659"
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          style={{ height: '45px', borderRadius: '6px' }}
-                        />
-                      </div>
-                      <div className="col-sm-6 form-group">
-                        <label style={{ fontWeight: '600', color: '#334155' }}>Preferred Study Destination *</label>
-                        <select
-                          className="form-control"
-                          value={formData.destination}
-                          onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                          style={{ height: '45px', borderRadius: '6px' }}
-                        >
-                          <option value="United Kingdom">United Kingdom (UK)</option>
-                          <option value="United States">United States (USA)</option>
-                          <option value="Canada">Canada</option>
-                          <option value="Australia">Australia</option>
-                          <option value="Hungary">Hungary</option>
-                          <option value="United Arab Emirates">United Arab Emirates (UAE)</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="form-group">
-                      <label style={{ fontWeight: '600', color: '#334155' }}>Target Study Level *</label>
-                      <select
-                        className="form-control"
-                        value={formData.studyLevel}
-                        onChange={(e) => setFormData({ ...formData, studyLevel: e.target.value })}
-                        style={{ height: '45px', borderRadius: '6px' }}
-                      >
-                        <option value="Undergraduate">Undergraduate / Bachelor's Degree</option>
-                        <option value="Postgraduate">Postgraduate / Master's Degree</option>
-                        <option value="Doctorate">Doctorate / Ph.D.</option>
-                        <option value="Foundation">Foundation Program</option>
-                        <option value="Pre-Master">Pre-Master Course</option>
-                        <option value="English Language">English Language Course</option>
-                      </select>
-                    </div>
-
-                    <div className="form-group">
-                      <label style={{ fontWeight: '600', color: '#334155' }}>Your Academic Background &amp; Questions</label>
-                      <textarea
-                        rows="4"
-                        className="form-control"
-                        placeholder="Mention your previous qualification, grades, desired course, or any questions you have..."
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        style={{ borderRadius: '6px' }}
-                      ></textarea>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="btn btn-primary btn-block"
-                      style={{
-                        background: '#102771',
-                        borderColor: '#102771',
-                        height: '48px',
-                        fontSize: '16px',
-                        fontWeight: '700',
-                        borderRadius: '6px',
-                        marginTop: '10px'
-                      }}
-                    >
-                      Submit Free Assessment Request
-                    </button>
-                  </form>
-                )}
+            {/* UK Office */}
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+              <div className="px-6 py-5 border-b border-gray-50">
+                <h3 className="text-xl font-black text-[#0b1a37] mb-3">UK OFFICE ADDRESS:</h3>
+                <p className="text-sm font-bold text-[#0b1a37]">Global Group of Education</p>
+                <p className="text-sm font-bold text-[#0b1a37] mb-2">UK Office</p>
+                <p className="text-sm text-gray-600 mb-1">Level 18, 40 Bank Street, Canary Wharf, London, E14 5NR, United Kingdom.</p>
+                <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
+                  <Mail size={13} className="text-[#fbaf1b]" />
+                  <a href="mailto:london@globalgroupofeducation.com" className="hover:text-[#fbaf1b] transition-colors">london@globalgroupofeducation.com</a>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <Phone size={13} className="text-[#fbaf1b]" />
+                  <a href="tel:+447586589659" className="hover:text-[#fbaf1b] transition-colors">+44 7586589659</a>
+                </div>
+              </div>
+              <div className="h-72">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.6!2d-0.0197!3d51.5054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602b6e0e0e0e1%3A0x1e1e1e1e1e1e1e1e!2s40%20Bank%20St%2C%20London%20E14%205NR!5e0!3m2!1sen!2suk!4v1620000000000!5m2!1sen!2suk"
+                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade" title="UK Office">
+                </iframe>
               </div>
             </div>
+
           </div>
         </div>
       </section>
+
+      <Testimonials />
+
     </div>
   );
 }
+

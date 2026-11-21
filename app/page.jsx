@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Testimonials from '../components/Testimonials';
 import {
   Users, GraduationCap, ArrowRight,
   Search, FileText, Plane, BookMarked, Languages, Award, Building2, HeartHandshake,
@@ -16,6 +17,72 @@ const services = [
   { Icon: HeartHandshake, title: 'Pre-Departure Briefing',   desc: 'Detailed orientation covering travel, banking, culture, and life at your destination.' },
 ];
 
+const aboutCards = [
+  {
+    num: '01', tag: 'About Global Group',
+    title: 'GLOBAL GROUP OF\nEDUCATION',
+    sub: '10+ Years of Excellence & Trusted Guidance',
+    desc: 'In this era of educational competition, Global Group of Education brings you the finest consultants to help you achieve your desired degree from one of the best institutes in the UK and world top-ranked universities.',
+    tags: ['10+ Years Experience','98% Visa Success Rate','30+ Partner Universities','5000+ Students Placed'],
+    btn: 'Learn More', btnHref: '/about-us', external: false,
+    img: '/assets/images/steps.jpg', imgRight: true,
+  },
+  {
+    num: '02', tag: 'University Selection',
+    title: 'UNIVERSITY SELECTION &\nGUIDANCE',
+    sub: 'Tailored Academic Pathways for Every Student',
+    desc: 'We help you choose the right universities and handle accommodation, travel, and pre-departure preparations for a smooth transition to higher education abroad.',
+    tags: ['Course Shortlisting','Ranking & Budget Matching','Accommodation Support','Pre-Departure Briefings'],
+    btn: 'Apply to University', btnHref: 'https://globalgroupofeducationportal.com/student-registration', external: true,
+    img: '/assets/images/college-students-cramming-outdoor.jpg', imgRight: false,
+  },
+  {
+    num: '03', tag: 'Financial Aid & Grants',
+    title: 'SCHOLARSHIPS AT TOP\nUNIVERSITIES',
+    sub: 'Merit & Need-Based Funding up to £10,000',
+    desc: 'We partner directly with leading universities in the UK, USA, Canada, and Australia to secure lucrative scholarships for our students, easing the financial path to studying abroad.',
+    tags: ['UK Vice-Chancellor Awards','USA Merit Scholarships','Canada Dean Grants','Partial & Full Awards'],
+    btn: 'Find Scholarships', btnHref: '/our-services', external: false,
+    img: '/assets/images/cources-bg1.jpg', imgRight: true,
+  },
+  {
+    num: '04', tag: 'Visa Excellence',
+    title: 'VISA & IMMIGRATION\nSUPPORT',
+    sub: 'High-Success Student Visa Consulting',
+    desc: 'Our dedicated team will help you secure your study visa, ensuring flawless CAS & I-20 documentation and thorough mock embassy interview preparation.',
+    tags: ['CAS & I-20 Processing','Financial Assessment','Mock Embassy Interviews','98% Approval Track Record'],
+    btn: 'Book Visa Consultation', btnHref: 'https://api.whatsapp.com/send/?phone=447586588658&text&type=phone_number&app_absent=0', external: true,
+    img: '/assets/images/happy-girl-with-suitcase-passport-isolated-pink-wall-dark-haired-girl-striped-shirt-wearing-striped-casual-t-shirt-being-ready-travel.jpg', imgRight: false,
+  },
+  {
+    num: '05', tag: 'Academic Programs',
+    title: 'EXPLORE ACADEMIC\nCOURSES',
+    sub: 'Undergraduate, Postgraduate & PhD Degrees',
+    desc: "Find accredited undergraduate degrees, master's programs, PhD research opportunities, and foundation pathway programs across STEM, Business, Healthcare, and Humanities.",
+    tags: ['Doctorate / PhD Degrees','Postgraduate / Masters','Undergraduate / Bachelors','Pre-Master & Foundation'],
+    btn: 'Open Course Finder', btnHref: 'https://globalgroupofeducationportal.com/courseFinder/index?access=pass', external: true,
+    img: '/assets/images/cources-bg.jpg', imgRight: true,
+  },
+  {
+    num: '06', tag: 'Global Gateways',
+    title: 'TOP STUDY\nDESTINATIONS',
+    sub: 'UK, USA, Canada, Australia & Europe',
+    desc: 'Choose from premier global education hubs offering post-study work rights, high standard of living, world-renowned faculties, and welcoming multicultural environments.',
+    tags: ['United Kingdom 🇬🇧','United States 🇺🇸','Canada 🇨🇦','Australia 🇦🇺','Europe & UAE 🇪🇺'],
+    btn: 'Explore Destinations', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
+    img: '/assets/images/why-choose-bg.jpg', imgRight: false,
+  },
+  {
+    num: '07', tag: 'Global Impact',
+    title: 'WE HELP STUDENTS GROW\nTHEIR GLOBAL POTENTIAL',
+    sub: 'Empowering Students Across 30+ Nationalities',
+    desc: 'We provide complete admissions services for Australia, Canada, Europe, UK, USA and other countries, guiding thousands of ambitious students into rewarding international careers.',
+    tags: ['98% Visa Success Rate','400+ Partner Universities','10+ Years Experience','100% Free Assessment'],
+    btn: 'Start Free Assessment', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
+    img: '/assets/images/user-graduates-banner.jpg', imgRight: true,
+  },
+];
+
 export default function HomePage() {
   return (
     <div>
@@ -23,17 +90,17 @@ export default function HomePage() {
       {/* ── 1. Hero ── */}
       <section className="relative overflow-hidden bg-[#0b1a37]" style={{ minHeight: '420px' }}>
         <div className="absolute inset-0 z-0">
-          <video autoPlay loop muted playsInline poster="/assets/images/banner1.jpg"
+          <video autoPlay loop muted playsInline
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full w-auto h-auto object-cover brightness-75">
-            <source src="/assets/videos/hero-video.mp4" type="video/mp4" />
+            <source src="/assets/videos/7252806-hd_1920_1080_25fps.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0"
             style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.90) 0%, rgba(8,15,36,0.75) 40%, rgba(8,15,36,0.20) 100%)' }} />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20">
           <div className="max-w-lg">
-            <p className="text-sm font-semibold text-gray-300 mb-3">
-              Welcome and <span className="text-[#fbaf1b] underline underline-offset-2 font-bold">Join Us for Success</span>
+            <p className="text-sm font-semibold text-white mb-3">
+              Welcome and <span className="text-white font-bold" style={{ textDecoration: 'underline', textDecorationColor: '#fbaf1b', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>Join Us for Success</span>
             </p>
             <h1 className="text-4xl lg:text-5xl font-black text-white leading-tight mb-5 drop-shadow-lg">
               Your Gateway to<br />Studying Abroad
@@ -55,12 +122,80 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── 2. Our Services ── */}
+      {/* ── 2. About Slider ── */}
+      <section id="about-section" className="bg-white py-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="text-center mb-12">
+            <span className="inline-flex items-center gap-2 bg-[#fbaf1b]/15 text-[#fbaf1b] text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-5">
+              <GraduationCap size={13} /> Complete Education Ecosystem
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-black text-[#0b1a37] leading-tight">
+              GLOBAL ADMISSIONS &amp; <span className="text-[#fbaf1b]">CONSULTANCY</span>
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto mt-4 text-sm leading-relaxed">
+              Discover our comprehensive admissions services, accredited academic degree pathways, and certified guidance designed to turn your study abroad aspirations into global success.
+            </p>
+          </div>
+          {/* Sticky scroll cards */}
+          <div className="sticky-cards flex flex-col gap-0">
+            {aboutCards.map((c, i) => (
+              <div key={c.num}
+                style={{ top: `80px` }}
+                className={`sticky rounded-xl border border-[#fbaf1b]/20 p-8 lg:p-10 flex flex-col lg:flex-row gap-10 items-center mb-4
+                  ${i === aboutCards.length - 1 ? 'shadow-[0_2px_8px_rgba(0,0,0,0.04)]' : 'shadow-sm'}
+                  ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+
+                {/* Image left — when imgRight is false */}
+                {!c.imgRight && (
+                  <div className="flex-1 w-full min-w-0 order-first lg:order-first">
+                    <img src={c.img} alt={c.tag} className="w-full h-72 object-cover rounded-xl" />
+                  </div>
+                )}
+
+                {/* Text */}
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-xs font-black text-[#fbaf1b] tracking-widest">{c.num}</span>
+                    <div className="h-px w-8 bg-[#fbaf1b]"></div>
+                    <span className="text-xs font-bold tracking-widest uppercase text-[#fbaf1b]">{c.tag}</span>
+                  </div>
+                  <h3 className="text-3xl font-black text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
+                  <p className="text-sm font-bold text-gray-600 mb-3">{c.sub}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-5">{c.desc}</p>
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    {c.tags.map(t => (
+                      <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">{t}</span>
+                    ))}
+                  </div>
+                  {c.external ? (
+                    <a href={c.btnHref} target="_blank" rel="noreferrer"
+                      className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                      {c.btn} <ArrowRight size={14} />
+                    </a>
+                  ) : (
+                    <Link href={c.btnHref}
+                      className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                      {c.btn} <ArrowRight size={14} />
+                    </Link>
+                  )}
+                </div>
+
+                {/* Image right — when imgRight is true */}
+                {c.imgRight && (
+                  <div className="flex-1 w-full min-w-0">
+                    <img src={c.img} alt={c.tag} className="w-full h-72 object-cover rounded-xl" />
+                  </div>
+                )}
+
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="bg-gray-50 py-12">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="bg-white rounded-lg border border-gray-100 shadow-sm p-8">
 
-            {/* Header — left heading, right description */}
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10">
               <div>
                 <span className="inline-flex items-center gap-1.5 bg-[#fbaf1b]/15 text-[#fbaf1b] text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full mb-3">
@@ -72,11 +207,10 @@ export default function HomePage() {
                 </h2>
               </div>
               <p className="text-gray-500 text-sm leading-relaxed max-w-sm lg:text-right">
-                From university selection to visa approval — we guide you at every single step of your international study abroad journey, ensuring the best outcome for your future career.
+                We help students achieve their dream of studying abroad by providing expert guidance, university selection, and complete admission support every step of the way.
               </p>
             </div>
 
-            {/* Service Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
               {services.map((s) => (
                 <div key={s.title} className="group border border-[#fbaf1b]/30 rounded-lg p-5 hover:shadow-md hover:-translate-y-1 transition-all bg-white">
@@ -89,16 +223,13 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="text-center mt-8">
-              <Link href="/our-services"
-                className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
-                View All Services <ArrowRight size={14} />
-              </Link>
-            </div>
+          
 
           </div>
         </div>
       </section>
+
+      <Testimonials />
 
     </div>
   );
