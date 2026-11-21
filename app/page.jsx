@@ -108,11 +108,11 @@ export default function HomePage() {
             </p>
             <div className="hero-text-4 flex flex-wrap gap-3">
               <a href="https://globalgroupofeducationportal.com/partner-registration" target="_blank" rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-[#fbaf1b] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#162544] hover:text-white transition-colors">
+                className="btn-slide inline-flex items-center gap-2 bg-[#fbaf1b] text-white font-medium text-sm px-5 py-2.5 rounded-md border border-[#fbaf1b]">
                 <Users size={15} /> Be a Partner
               </a>
               <a href="https://globalgroupofeducationportal.com/student-registration" target="_blank" rel="noreferrer"
-                className="inline-flex items-center gap-2 bg-white/10 border border-white text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#162544] hover:border-[#162544] transition-colors">
+                className="btn-slide inline-flex items-center gap-2 bg-white/10 border border-white text-white font-medium text-sm px-5 py-2.5 rounded-md">
                 <GraduationCap size={15} /> Be a Student
               </a>
             </div>
@@ -121,10 +121,10 @@ export default function HomePage() {
       </section>
 
       {/* ── 2. About Slider ── */}
-      <section id="about-section" className="bg-white py-16">
+      <section id="about-section" className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-12">
-            <span className="inline-flex items-center gap-2 bg-[#162544] text-white text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5">
+          <div className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5">
               <GraduationCap size={13} /> Complete Education Ecosystem
             </span>
             <h2 className="text-4xl lg:text-5xl font-semibold text-[#0b1a37] leading-tight">
@@ -162,12 +162,12 @@ export default function HomePage() {
                   </div>
                   {c.external ? (
                     <a href={c.btnHref} target="_blank" rel="noreferrer"
-                      className="inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                      className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
                       {c.btn} <ArrowRight size={14} />
                     </a>
                   ) : (
                     <Link href={c.btnHref}
-                      className="inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                      className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
                       {c.btn} <ArrowRight size={14} />
                     </Link>
                   )}
@@ -185,25 +185,47 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#0b1a37] py-14">
+      {/* ── 3. Our Services ── */}
+      <section className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
-          {/* Heading */}
-          <div className="text-center mb-10">
-            <h2 className="text-white font-semibold mb-2">Services</h2>
-            <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mb-4"></div>
-            <p className="text-gray-400 text-sm">Global Group of Education helps you get admission in your preferred university.</p>
+          {/* Same header style as GLOBAL ADMISSIONS section */}
+          <div className="text-center mb-6">
+            <span className="inline-flex items-center gap-2 bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
+              <Award size={13} /> What We Offer
+            </span>
+            <h2 className="text-[#0b1a37] font-semibold">Our Services,</h2>
+            <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-3 mb-3"></div>
+            <p className="text-gray-500 text-sm max-w-xl mx-auto">Global Group of Education helps you get admission in your preferred university.</p>
           </div>
 
-          {/* Cards grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s) => (
-              <div key={s.title} className="group bg-[#162544] rounded-xl p-6 hover:bg-[#1e3a6e] transition-colors cursor-default">
-                <div className="w-12 h-12 rounded-lg bg-[#0b1a37] flex items-center justify-center mb-4">
-                  <s.Icon size={22} className="text-white" />
+          {/* Same sticky card style as GLOBAL ADMISSIONS */}
+          <div className="sticky-cards flex flex-col gap-0">
+            {services.map((s, i) => (
+              <div key={s.title}
+                style={{ top: '80px' }}
+                className={`sticky rounded-xl border border-[#fbaf1b]/20 p-8 lg:p-10 flex flex-col lg:flex-row gap-8 items-start mb-4
+                  ${i === services.length - 1 ? 'shadow-[0_2px_8px_rgba(0,0,0,0.04)]' : 'shadow-sm'}
+                  ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+
+                {/* Icon left when even, right when odd */}
+                {i % 2 !== 0 && (
+                  <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#162544] flex items-center justify-center">
+                    <s.Icon size={28} className="text-white" />
+                  </div>
+                )}
+
+                <div className="flex-1">
+                  <h3 className="text-[#0b1a37] font-semibold mb-2">{s.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
                 </div>
-                <h3 className="text-white font-semibold text-sm mb-2">{s.title}</h3>
-                <p className="text-gray-400 text-xs leading-relaxed">{s.desc}</p>
+
+                {i % 2 === 0 && (
+                  <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#162544] flex items-center justify-center">
+                    <s.Icon size={28} className="text-white" />
+                  </div>
+                )}
+
               </div>
             ))}
           </div>
@@ -216,6 +238,9 @@ export default function HomePage() {
     </div>
   );
 }
+
+
+
 
 
 

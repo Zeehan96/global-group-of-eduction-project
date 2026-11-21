@@ -80,7 +80,7 @@ export default function PrivacyPolicyPage() {
   return (
     <div>
       {/* Banner */}
-      <div className="bg-[#0b1a37] py-16 text-white text-center">
+      <div className="bg-[#0b1a37] py-8 text-white text-center">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <span className="inline-flex items-center bg-[#162544] text-white text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
             Legal
@@ -135,6 +135,8 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+
+
 
 
 

@@ -16,7 +16,7 @@ export default function ContactUsPage() {
   return (
     <div>
       {/* Banner */}
-      <div className="bg-[#0b1a37] py-16 text-white text-center">
+      <div className="bg-[#0b1a37] py-8 text-white text-center">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <span className="inline-flex items-center bg-[#162544] text-white text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
             Get In Touch
@@ -29,7 +29,7 @@ export default function ContactUsPage() {
         </div>
       </div>
 
-      <section className="bg-gray-50 py-14">
+      <section className="bg-gray-50 py-8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col gap-10">
 
           {/* ── Contact Form ── */}
@@ -44,7 +44,7 @@ export default function ContactUsPage() {
                 <h3 className="text-xl font-bold text-green-700 mb-2">Message Sent!</h3>
                 <p className="text-gray-500 text-sm mb-4">Our team will contact you shortly.</p>
                 <button onClick={() => setSubmitted(false)}
-                  className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                  className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
                   Send Another
                 </button>
               </div>
@@ -84,7 +84,7 @@ export default function ContactUsPage() {
                 </div>
                 <div>
                   <button type="submit"
-                    className="inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-4 py-2 rounded-md hover:bg-[#0d172a] transition-colors">
+                    className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-bold text-sm px-4 py-2 rounded-md hover:bg-[#0d172a] transition-colors">
                     SUBMIT <Send size={14} />
                   </button>
                 </div>
@@ -154,6 +154,8 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
+
 
 
 

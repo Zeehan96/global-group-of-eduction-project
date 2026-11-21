@@ -41,37 +41,58 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-gray-50 py-14">
+    <section className="bg-white py-8">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
 
         {/* Heading */}
-        <div className="text-center mb-10">
-          <span className="inline-flex items-center bg-[#162544] text-white text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-md mb-3">
-            Student Stories
+        <div className="text-center mb-6">
+          <span className="inline-flex items-center gap-2 bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
+            ★ Student Stories
           </span>
-          <h2 className="text-3xl font-bold text-[#0b1a37]">Alumni Testimonials</h2>
-          <div className="w-16 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-3"></div>
+          <h2 className="text-[#0b1a37] font-semibold">Alumni Testimonials</h2>
+          <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-3"></div>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <div key={t.name} className="bg-white rounded-xl border border-gray-100 shadow-sm p-6 flex flex-col gap-4 hover:shadow-md transition-shadow">
-              {/* Quote mark */}
-              <span className="text-4xl font-bold text-[#fbaf1b] leading-none">"</span>
+        {/* Alternating cards — left image right content, then right image left content */}
+        <div className="sticky-cards flex flex-col gap-0">
+          {testimonials.map((t, i) => (
+            <div key={t.name}
+              style={{ top: '80px' }}
+              className={`sticky rounded-xl border border-[#fbaf1b]/20 p-8 lg:p-10 flex flex-col lg:flex-row gap-8 items-center mb-4
+                ${i === testimonials.length - 1 ? 'shadow-[0_2px_8px_rgba(0,0,0,0.04)]' : 'shadow-sm'}
+                ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
 
-              {/* Text */}
-              <p className="text-gray-600 text-sm leading-relaxed flex-1">{t.text}</p>
+              {/* Image left when even */}
+              {i % 2 === 0 && (
+                <div className="flex-shrink-0 w-full lg:w-64">
+                  <img src={t.img} alt={t.name}
+                    className="w-full h-52 lg:h-44 object-cover rounded-xl" />
+                </div>
+              )}
 
-              {/* Author */}
-              <div className="flex items-center gap-3 pt-3 border-t border-gray-50">
-                <img src={t.img} alt={t.name}
-                  className="w-11 h-11 rounded-full object-cover flex-shrink-0 border-2 border-[#fbaf1b]" />
-                <div>
-                  <p className="text-sm font-bold text-[#0b1a37]">{t.name}</p>
-                  <p className="text-xs text-[#fbaf1b] font-semibold">{t.country}</p>
+              {/* Content */}
+              <div className="flex-1">
+                <span className="text-4xl text-[#fbaf1b] leading-none font-semibold">"</span>
+                <p className="text-gray-600 text-sm leading-relaxed mt-1 mb-4">{t.text}</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-[#162544] flex items-center justify-center text-white text-xs font-semibold flex-shrink-0">
+                    {t.name.split(' ').map(n => n[0]).join('')}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-[#0b1a37]">{t.name}</p>
+                    <p className="text-xs text-[#fbaf1b] font-semibold">{t.country}</p>
+                  </div>
                 </div>
               </div>
+
+              {/* Image right when odd */}
+              {i % 2 !== 0 && (
+                <div className="flex-shrink-0 w-full lg:w-64">
+                  <img src={t.img} alt={t.name}
+                    className="w-full h-52 lg:h-44 object-cover rounded-xl" />
+                </div>
+              )}
+
             </div>
           ))}
         </div>
@@ -80,7 +101,4 @@ export default function Testimonials() {
     </section>
   );
 }
-
-
-
 

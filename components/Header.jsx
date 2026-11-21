@@ -110,7 +110,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <Link
               href="https://globalgroupofeducationportal.com/login"
-              className="flex items-center gap-2 bg-[#162544] text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-[#0d172a] transition-colors"
+              className="btn-slide flex items-center gap-2 bg-[#162544] text-white text-sm font-semibold px-4 py-2 rounded-md hover:bg-[#0d172a] transition-colors"
             >
               <span>Login</span>
               <ArrowUpRight size={14} className="text-white" />
@@ -197,4 +197,5 @@ export default function Header() {
     </>
   );
 }
+
 
