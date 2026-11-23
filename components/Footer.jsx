@@ -123,10 +123,7 @@ export default function Footer() {
           <h3 className="text-white font-bold text-base mb-4 pb-2 border-b-2 border-[#fbaf1b]">Get Started</h3>
           <ul className="space-y-3">
             <li>
-              <a href="mailto:london@globalgroupofeducation.com?subject=Partnership Enquiry" className="flex items-center gap-3 group">
-                <span className="w-8 h-8 rounded-md bg-[#162544] flex items-center justify-center text-[#fbaf1b] group-hover:bg-[#fbaf1b] group-hover:text-[#0b1a37] transition-colors flex-shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </span>
+              <a href="https://globalgroupofeducationportal.com/partner-registration" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
                 <div>
                   <p className="text-white text-sm font-semibold group-hover:text-[#fbaf1b] transition-colors">Be a Partner</p>
                   <p className="text-gray-500 text-xs">Join our partner network</p>
@@ -134,21 +131,15 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <Link href="/contact-us" className="flex items-center gap-3 group">
-                <span className="w-8 h-8 rounded-md bg-[#162544] flex items-center justify-center text-[#fbaf1b] group-hover:bg-[#fbaf1b] group-hover:text-[#0b1a37] transition-colors flex-shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                </span>
+              <a href="https://globalgroupofeducationportal.com/partner-registration" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
                 <div>
                   <p className="text-white text-sm font-semibold group-hover:text-[#fbaf1b] transition-colors">Be a Student</p>
                   <p className="text-gray-500 text-xs">Start your study abroad journey</p>
                 </div>
-              </Link>
+              </a>
             </li>
             <li>
-              <a href="https://globalgroupofeducationportal.com/courseFinder/index?access=pass" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
-                <span className="w-8 h-8 rounded-md bg-[#162544] flex items-center justify-center text-[#fbaf1b] group-hover:bg-[#fbaf1b] group-hover:text-[#0b1a37] transition-colors flex-shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-                </span>
+              <a href="https://globalgroupofeducationportal.com/login" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
                 <div>
                   <p className="text-white text-sm font-semibold group-hover:text-[#fbaf1b] transition-colors">Explore Our Portal</p>
                   <p className="text-gray-500 text-xs">Browse courses & universities</p>
@@ -156,10 +147,7 @@ export default function Footer() {
               </a>
             </li>
             <li>
-              <a href="https://globalgroupofeducationportal.com/courseFinder/index?access=pass" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
-                <span className="w-8 h-8 rounded-md bg-[#162544] flex items-center justify-center text-[#fbaf1b] group-hover:bg-[#fbaf1b] group-hover:text-[#0b1a37] transition-colors flex-shrink-0">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                </span>
+              <a href="https://globalgroupofeducationportal.com/login" target="_blank" rel="noreferrer" className="flex items-center gap-3 group">
                 <div>
                   <p className="text-white text-sm font-semibold group-hover:text-[#fbaf1b] transition-colors">Apply for Scholarship</p>
                   <p className="text-gray-500 text-xs">Find & apply for funding</p>
