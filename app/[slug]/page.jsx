@@ -11,6 +11,7 @@ const destinationData = {
     banner: '/assets/images/study-incountry-images/rear-view-young-man-looking-river-thames.jpg',
     flag: '🇬🇧',
     country: 'United Kingdom',
+    desc: 'Study at Oxford, Cambridge & 100+ world-ranked UK universities. Get expert guidance on admissions, scholarships, and your Student visa from GGE certified counsellors.',
     article: [
       { type: 'heading', text: 'Why Study in the United Kingdom?' },
       { type: 'para', text: 'The United Kingdom is home to some of the world\'s most prestigious universities, including Oxford, Cambridge, Imperial College London, and the London School of Economics. A UK degree is recognised and respected by employers and academic institutions globally, giving graduates a significant competitive advantage.' },
@@ -38,6 +39,7 @@ const destinationData = {
     banner: '/assets/images/study-incountry-images/study-in-usa.jpg',
     flag: '🇺🇸',
     country: 'United States of America',
+    desc: 'Pursue your American dream at Harvard, MIT, Stanford & 4,000+ accredited US universities. GGE provides complete F-1 visa and admissions support.',
     article: [
       { type: 'heading', text: 'Why Study in the USA?' },
       { type: 'para', text: 'The United States hosts the largest number of international students in the world and is home to globally renowned institutions including Harvard, MIT, Stanford, and Yale. American universities consistently dominate the QS and Times Higher Education world rankings, offering unmatched academic excellence across virtually every discipline.' },
@@ -65,6 +67,7 @@ const destinationData = {
     banner: '/assets/images/study-incountry-images/study-in-canada.jpg',
     flag: '🇨🇦',
     country: 'Canada',
+    desc: 'Build your future in Canada with a world-class degree from UofT, UBC or McGill. GGE handles your SDS study permit and post-graduation work permit.',
     article: [
       { type: 'heading', text: 'Why Study in Canada?' },
       { type: 'para', text: 'Canada is one of the most welcoming and sought-after study destinations for international students. With world-ranked universities such as the University of Toronto, UBC, McGill, and McMaster, Canadian degrees are globally respected and highly valued by employers. Canada consistently ranks among the top countries for quality of life, safety, and inclusivity.' },
@@ -92,6 +95,7 @@ const destinationData = {
     banner: '/assets/images/study-incountry-images/study-in-australia.jpg',
     flag: '🇦🇺',
     country: 'Australia',
+    desc: 'Experience world-class education at ANU, University of Melbourne & Sydney. GGE guides you through your Subclass 500 student visa and post-study work rights.',
     article: [
       { type: 'heading', text: 'Why Study in Australia?' },
       { type: 'para', text: 'Australia is the third most popular destination for international students in the English-speaking world. Home to the Group of Eight (Go8) universities — including the Australian National University, University of Melbourne, and University of Sydney — Australia offers world-class education with globally recognised qualifications.' },
@@ -118,6 +122,7 @@ const destinationData = {
   'study-in-hungary': {
     banner: '/assets/images/study-incountry-images/study-in-hungry.jpg',    flag: '🇭🇺',
     country: 'Hungary',
+    desc: 'Study in the heart of Europe with EU-recognised degrees and affordable tuition. Apply for the Stipendium Hungaricum scholarship with full GGE support.',
     article: [
       { type: 'heading', text: 'Why Study in Hungary?' },
       { type: 'para', text: 'Hungary has emerged as one of the most attractive study destinations in Europe, particularly for students seeking EU-accredited degrees at affordable tuition fees. Located in the heart of Central Europe, Hungary offers a rich cultural heritage, a high standard of education, and a welcoming environment for international students.' },
@@ -145,6 +150,7 @@ const destinationData = {
     banner: '/assets/images/study-incountry-images/study-in-uae.jpg',
     flag: '🇦🇪',
     country: 'United Arab Emirates',
+    desc: 'Study at NYU Abu Dhabi, Heriot-Watt or Middlesex Dubai. Benefit from a tax-free economy, fast admissions, and GGE\'s official UAE university partnerships.',
     article: [
       { type: 'heading', text: 'Why Study in the UAE?' },
       { type: 'para', text: 'The United Arab Emirates has rapidly transformed into a world-class education hub, attracting students from across Asia, Africa, and beyond. With over 70 universities and branch campuses of globally renowned institutions — including NYU Abu Dhabi, Heriot-Watt University Dubai, Middlesex University Dubai, and the University of Birmingham Dubai — the UAE offers internationally recognised degrees in a modern, dynamic environment.' },
@@ -172,6 +178,7 @@ const destinationData = {
     banner: '/assets/images/study-incountry-images/study-in-europe.jpg',
     flag: '🇪🇺',
     country: 'Europe',
+    desc: 'Explore world-class universities across Germany, France, Netherlands & more. Many European countries offer tuition-free education with Schengen zone access.',
     article: [
       { type: 'heading', text: 'Why Study in Europe?' },
       { type: 'para', text: 'Europe is one of the world\'s most diverse and historically rich study destinations, home to some of the oldest and most prestigious universities on the planet. From the University of Bologna in Italy — founded in 1088 — to modern research powerhouses like ETH Zurich, TU Munich, and KU Leuven, Europe offers world-class education across every discipline.' },
@@ -199,6 +206,7 @@ const destinationData = {
     banner: '/assets/images/study-incountry-images/study-in-europe.jpg',
     flag: '🇳🇿',
     country: 'New Zealand',
+    desc: 'All 8 New Zealand universities rank in the world\'s top 3%. Enjoy post-study work rights up to 3 years and a clear pathway to permanent residency.',
     article: [
       { type: 'heading', text: 'Why Study in New Zealand?' },
       { type: 'para', text: 'New Zealand is an increasingly popular study destination, offering internationally recognised qualifications, a safe and welcoming environment, and stunning natural landscapes. All eight of New Zealand\'s universities rank in the top 3% of universities worldwide according to the QS World University Rankings, making it a destination of genuine academic excellence.' },
@@ -276,8 +284,8 @@ export default async function DynamicSlugPage({ params }) {
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center justify-center h-full">
           <h1 style={{ fontSize: '44px', lineHeight: '54px', fontWeight: '700', color: '#fff' }}>{formattedTitle}</h1>
-          {page.meta_description && (
-            <p style={{ fontSize: '14px', color: '#fff', fontWeight: '400' }} className="max-w-2xl mx-auto mt-4 leading-relaxed">{page.meta_description}</p>
+          {(destInfo?.desc || page.meta_description) && (
+            <p style={{ fontSize: '14px', color: '#fff', fontWeight: '400' }} className="max-w-2xl mx-auto mt-4 leading-relaxed">{destInfo?.desc || page.meta_description}</p>
           )}
         </div>
       </div>
