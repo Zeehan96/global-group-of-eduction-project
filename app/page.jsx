@@ -25,6 +25,16 @@ const aboutCards = [
     title: 'GLOBAL GROUP OF\nEDUCATION',
     sub: '10+ Years of Excellence & Trusted Guidance',
     desc: 'In this era of educational competition, Global Group of Education brings you the finest consultants to help you achieve your desired degree from one of the best institutes in the UK and world top-ranked universities.',
+    extra: [
+      {
+        heading: 'OUR WELL-GROUNDED TEAM',
+        text: 'We have trustworthy consultant\'s veterans who are highly qualified and are skilled at their work. Our expert team will guide you according to your preference and potential, and will also provide you with impartial advice.',
+      },
+      {
+        heading: 'WHY CHOOSE GLOBAL GROUP OF EDUCATION?',
+        text: 'We have a mission of making international education accessible and providing students with opportunities that will lead them towards a successful career. We are reliable, co-operative and have a fantastic team working to make education even more convenient.',
+      },
+    ],
     tags: ['10+ Years Experience','98% Visa Success Rate','30+ Partner Universities','5000+ Students Placed'],
     btn: 'Explore Our Portal', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: '/assets/images/steps.jpg', imgRight: true,
@@ -156,6 +166,19 @@ export default function HomePage() {
                   <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
                   <p className="text-sm font-semibold text-gray-600 mb-3">{c.sub}</p>
                   <p className="text-gray-500 text-sm leading-relaxed mb-5">{c.desc}</p>
+
+                  {/* Extra sections (headings + paragraphs) */}
+                  {c.extra?.length > 0 && (
+                    <div className="mb-5 flex flex-col gap-4">
+                      {c.extra.map((block) => (
+                        <div key={block.heading}>
+                          <p className="text-sm font-bold text-[#0b1a37] mb-1">{block.heading}</p>
+                          <p className="text-gray-500 text-sm leading-relaxed">{block.text}</p>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="flex flex-wrap gap-2 mb-5">
                     {c.tags.map(t => (
                       <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md hover:bg-[#fbaf1b] hover:text-white hover:border-[#fbaf1b] transition-colors cursor-default">{t}</span>
