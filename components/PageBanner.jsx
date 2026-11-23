@@ -31,7 +31,7 @@ export default function PageBanner({
         <div className={videoHero ? 'max-w-lg' : ''}>
 
           {chip && (
-            <span className="hero-text-1 inline-flex items-center bg-[#fbaf1b]/20 text-[#fbaf1b] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
+            <span className="hero-text-1 inline-flex items-center text-[#fbaf1b] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
               {chip}
             </span>
           )}
@@ -44,7 +44,7 @@ export default function PageBanner({
           </h1>
 
           {!videoHero && (
-            <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-1 mb-4"></div>
+            <div className="invisible h-4"></div>
           )}
 
           {subtitle && (

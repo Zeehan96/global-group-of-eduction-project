@@ -25,16 +25,6 @@ const aboutCards = [
     title: 'GLOBAL GROUP OF\nEDUCATION',
     sub: '10+ Years of Excellence & Trusted Guidance',
     desc: 'In this era of educational competition, Global Group of Education brings you the finest consultants to help you achieve your desired degree from one of the best institutes in the UK and world top-ranked universities.',
-    extra: [
-      {
-        heading: 'OUR WELL-GROUNDED TEAM',
-        text: 'We have trustworthy consultant\'s veterans who are highly qualified and are skilled at their work. Our expert team will guide you according to your preference and potential, and will also provide you with impartial advice.',
-      },
-      {
-        heading: 'WHY CHOOSE GLOBAL GROUP OF EDUCATION?',
-        text: 'We have a mission of making international education accessible and providing students with opportunities that will lead them towards a successful career. We are reliable, co-operative and have a fantastic team working to make education even more convenient.',
-      },
-    ],
     tags: ['10+ Years Experience','98% Visa Success Rate','30+ Partner Universities','5000+ Students Placed'],
     btn: 'Explore Our Portal', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: '/assets/images/steps.jpg', imgRight: true,
@@ -135,7 +125,7 @@ export default function HomePage() {
       <section id="about-section" className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-6">
-            <span className="inline-flex items-center gap-2 bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5">
+            <span className="inline-flex items-center gap-2 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
               <GraduationCap size={13} /> Complete Education Ecosystem
             </span>
             <h2 className="text-4xl lg:text-5xl font-semibold text-[#0b1a37] leading-tight">
@@ -150,58 +140,93 @@ export default function HomePage() {
             {aboutCards.map((c, i) => (
               <div key={c.num}
                 style={{ top: `80px` }}
-                className={`sticky rounded-xl border border-[#fbaf1b]/20 p-8 lg:p-10 flex flex-col lg:flex-row gap-10 items-center mb-4
+                className={`sticky rounded-xl border border-[#fbaf1b]/20 mb-4
                   ${i === aboutCards.length - 1 ? 'shadow-[0_2px_8px_rgba(0,0,0,0.04)]' : 'shadow-sm'}
-                  ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
+                  ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                  ${c.num === '01' ? 'block' : 'p-8 lg:p-10 flex flex-col lg:flex-row gap-10 items-center'}`}>
 
-                {/* Image left — when imgRight is false */}
-                {!c.imgRight && (
-                  <div className="flex-1 w-full min-w-0 order-first lg:order-first">
-                    <img src={c.img} alt={c.tag} className="w-full h-72 object-cover rounded-xl" />
+                {/* ── Card 01: text left, images right ── */}
+                {c.num === '01' && (
+                  <div className="flex flex-col lg:flex-row gap-8 items-center p-8 lg:p-10">
+                    {/* Text left */}
+                    <div className="flex-1">
+                      <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
+                      <p className="text-sm font-semibold text-gray-600 mb-3">{c.sub}</p>
+                      <p className="text-gray-500 text-sm leading-relaxed mb-5">{c.desc}</p>
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {c.tags.map(t => (
+                          <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md hover:bg-[#fbaf1b] hover:text-white hover:border-[#fbaf1b] transition-colors cursor-default">{t}</span>
+                        ))}
+                      </div>
+                      <a href={c.btnHref} target="_blank" rel="noreferrer"
+                        className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                        {c.btn} <ArrowRight size={14} />
+                      </a>
+                    </div>
+                    {/* Images right */}
+                    <div className="flex-1 w-full min-w-0">
+                      <div className="flex gap-2" style={{ height: '220px' }}>
+                        <div className="flex-1 overflow-hidden rounded-xl">
+                          <img src="/assets/images/about-us-image1.png" alt="Consultant"
+                            className="w-full h-full object-cover object-center" />
+                        </div>
+                        <div className="flex-1 overflow-hidden rounded-xl">
+                          <img src="/assets/images/about-us-img2.png" alt="Graduate"
+                            className="w-full h-full object-cover object-top" />
+                        </div>
+                        <div className="flex-1 rounded-xl relative overflow-hidden flex items-center justify-center"
+                          style={{ backgroundImage: 'url(/assets/images/about-us-image3.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#f1f5f9' }}>
+                          <div className="absolute inset-0 bg-white/60"></div>
+                          <div className="relative z-10 text-center">
+                            <p className="text-4xl font-black text-[#0b1a37] leading-none">10</p>
+                            <p className="text-[9px] font-bold text-[#0b1a37] mt-1 tracking-wide uppercase">Years of<br/>Experience</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 )}
 
-                {/* Text */}
-                <div className="flex-1">
-                  <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
-                  <p className="text-sm font-semibold text-gray-600 mb-3">{c.sub}</p>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-5">{c.desc}</p>
+                {/* ── All other cards: original layout ── */}
+                {c.num !== '01' && (
+                  <>
+                    {/* Image left */}
+                    {!c.imgRight && (
+                      <div className="flex-1 w-full min-w-0 order-first lg:order-first">
+                        <img src={c.img} alt={c.tag} className="w-full h-72 object-cover rounded-xl" />
+                      </div>
+                    )}
 
-                  {/* Extra sections (headings + paragraphs) */}
-                  {c.extra?.length > 0 && (
-                    <div className="mb-5 flex flex-col gap-4">
-                      {c.extra.map((block) => (
-                        <div key={block.heading}>
-                          <p className="text-sm font-bold text-[#0b1a37] mb-1">{block.heading}</p>
-                          <p className="text-gray-500 text-sm leading-relaxed">{block.text}</p>
-                        </div>
-                      ))}
+                    {/* Text */}
+                    <div className="flex-1">
+                      <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
+                      <p className="text-sm font-semibold text-gray-600 mb-3">{c.sub}</p>
+                      <p className="text-gray-500 text-sm leading-relaxed mb-5">{c.desc}</p>
+                      <div className="flex flex-wrap gap-2 mb-5">
+                        {c.tags.map(t => (
+                          <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md hover:bg-[#fbaf1b] hover:text-white hover:border-[#fbaf1b] transition-colors cursor-default">{t}</span>
+                        ))}
+                      </div>
+                      {c.external ? (
+                        <a href={c.btnHref} target="_blank" rel="noreferrer"
+                          className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                          {c.btn} <ArrowRight size={14} />
+                        </a>
+                      ) : (
+                        <Link href={c.btnHref}
+                          className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
+                          {c.btn} <ArrowRight size={14} />
+                        </Link>
+                      )}
                     </div>
-                  )}
 
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {c.tags.map(t => (
-                      <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md hover:bg-[#fbaf1b] hover:text-white hover:border-[#fbaf1b] transition-colors cursor-default">{t}</span>
-                    ))}
-                  </div>
-                  {c.external ? (
-                    <a href={c.btnHref} target="_blank" rel="noreferrer"
-                      className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
-                      {c.btn} <ArrowRight size={14} />
-                    </a>
-                  ) : (
-                    <Link href={c.btnHref}
-                      className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-5 py-2.5 rounded-md hover:bg-[#0d172a] transition-colors">
-                      {c.btn} <ArrowRight size={14} />
-                    </Link>
-                  )}
-                </div>
-
-                {/* Image right — when imgRight is true */}
-                {c.imgRight && (
-                  <div className="flex-1 w-full min-w-0">
-                    <img src={c.img} alt={c.tag} className="w-full h-72 object-cover rounded-xl" />
-                  </div>
+                    {/* Image right */}
+                    {c.imgRight && (
+                      <div className="flex-1 w-full min-w-0">
+                        <img src={c.img} alt={c.tag} className="w-full h-72 object-cover rounded-xl" />
+                      </div>
+                    )}
+                  </>
                 )}
 
               </div>
@@ -212,7 +237,7 @@ export default function HomePage() {
       {/* ── 3. Our Services ── */}
       <ServicesSection />
 
-      <Testimonials />
+      {/* <Testimonials /> */}
 
     </div>
   );

@@ -46,11 +46,10 @@ export default function Testimonials() {
 
         {/* Heading */}
         <div className="text-center mb-6">
-          <span className="inline-flex items-center gap-2 bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
+          <span className="inline-flex items-center gap-2 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
             ★ Student Stories
           </span>
           <h2 className="text-[#0b1a37] font-semibold">Alumni Testimonials</h2>
-          <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-3"></div>
         </div>
 
         <div className="sticky-cards flex flex-col gap-0">

@@ -88,8 +88,7 @@ export default function ContactUsPage() {
             Get In Touch
           </span>
           <h1 className="text-white mt-2" style={{ fontSize: '44px', lineHeight: '54px', fontWeight: '700' }}>Contact Us</h1>
-          <div className="w-16 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-4 mb-4"></div>
-          <p style={{ fontSize: '14px', color: '#ffffff', fontWeight: '400' }} className="max-w-xl mx-auto">
+          <p style={{ fontSize: '14px', color: '#ffffff', fontWeight: '400' }} className="max-w-xl mx-auto mt-4">
             Reach out to our expert team for 100% free counselling, university selection, and visa guidance.
           </p>
         </div>
@@ -164,7 +163,7 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      <Testimonials />
+      {/* <Testimonials /> */}
     </div>
   );
 }

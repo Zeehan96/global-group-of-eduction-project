@@ -275,11 +275,7 @@ export default async function DynamicSlugPage({ params }) {
           <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.70)' }}></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center justify-center h-full">
-          <span className="inline-flex items-center bg-[#fbaf1b]/20 text-[#fbaf1b] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
-            {isDestination ? `Global Study Destination` : 'Global Group of Education'}
-          </span>
           <h1 style={{ fontSize: '44px', lineHeight: '54px', fontWeight: '700', color: '#fff' }}>{formattedTitle}</h1>
-          <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-4"></div>
           {page.meta_description && (
             <p style={{ fontSize: '14px', color: '#fff', fontWeight: '400' }} className="max-w-2xl mx-auto mt-4 leading-relaxed">{page.meta_description}</p>
           )}
@@ -291,11 +287,7 @@ export default async function DynamicSlugPage({ params }) {
         <section className="bg-gray-50 py-10">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div className="text-center mb-8">
-              <span className="inline-flex items-center bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3">
-                Why Study in {destInfo.country}
-              </span>
               <h2 className="text-[#0b1a37] font-semibold">Key Highlights</h2>
-              <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-3"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {destInfo.highlights.map((h) => (
@@ -369,7 +361,7 @@ export default async function DynamicSlugPage({ params }) {
       </section>
 
       {/* Testimonials */}
-      <Testimonials />
+      {/* <Testimonials /> */}
 
     </div>
   );
