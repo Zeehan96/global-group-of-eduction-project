@@ -45,7 +45,7 @@ export default function Header() {
         href={href}
         onClick={onClick || close}
         className={`flex items-center gap-1.5 px-3 py-2 text-sm font-semibold transition-colors
-          ${active ? 'text-[#fbaf1b] ' : 'text-[#162447] hover:text-[#fbaf1b]'}`}
+          ${active ? 'text-[#fbaf1b]' : 'text-[#162447] hover:text-[#fbaf1b]'}`}
       >
         <Icon size={15} />
         {label}
@@ -78,7 +78,7 @@ export default function Header() {
               <button
                 onClick={() => setDropOpen(!dropOpen)}
                 className={`flex items-center gap-1.5 px-3 py-2 text-sm font-semibold transition-colors
-                  ${isDestActive ? 'text-[#fbaf1b] border-b-2 border-[#fbaf1b]' : 'text-[#162447] hover:text-[#fbaf1b]'}`}
+                  ${isDestActive ? 'text-[#fbaf1b]' : 'text-[#162447] hover:text-[#fbaf1b]'}`}
               >
                 <Globe size={15} />
                 Study Destinations
@@ -91,7 +91,7 @@ export default function Header() {
                     <li key={d.href}>
                       <Link href={d.href} onClick={close}
                         className="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-[#162447] hover:bg-gray-50 hover:pl-5 transition-all">
-                        <Flag size={12} className="text-[#162447]" />
+                        <span className="w-2 h-2 rounded-full bg-[#fbaf1b] flex-shrink-0 inline-block"></span>
                         {d.label}
                       </Link>
                     </li>
@@ -166,7 +166,7 @@ export default function Header() {
                           onClick={close}
                           className="flex items-center gap-3 px-4 py-2.5 text-sm font-semibold text-[#162447] hover:bg-gray-100"
                         >
-                          <Flag size={12} />
+                          <span className="w-2 h-2 rounded-full bg-[#fbaf1b] flex-shrink-0 inline-block"></span>
                           {d.label}
                         </Link>
                       </li>
@@ -197,5 +197,6 @@ export default function Header() {
     </>
   );
 }
+
 
 

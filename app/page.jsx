@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Testimonials from '../components/Testimonials';
 import HeroVideo from '../components/HeroVideo';
+import ServicesSection from '../components/ServicesSection';
 import {
   Users, GraduationCap, ArrowRight,
   Search, FileText, Plane, BookMarked, Languages, Award, Building2, HeartHandshake,
@@ -89,21 +90,21 @@ export default function HomePage() {
     <div>
 
       {/* ── 1. Hero ── */}
-      <section className="relative overflow-hidden bg-[#0b1a37]" style={{ minHeight: '420px' }}>
+      <section className="relative overflow-hidden bg-[#0b1a37]" style={{ minHeight: '500px' }}>
         <div className="absolute inset-0 z-0">
           <HeroVideo />
           <div className="absolute inset-0"
-            style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.75) 0%, rgba(8,15,36,0.65) 35%, rgba(8,15,36,0.15) 60%, rgba(8,15,36,0.0) 100%)' }} />
+            style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.85) 0%, rgba(8,15,36,0.60) 40%, rgba(8,15,36,0.0) 65%, rgba(8,15,36,0.0) 100%)' }} />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20 flex items-center" style={{ minHeight: '500px' }}>
           <div className="max-w-lg">
             <p className="hero-text-1 text-sm font-semibold text-white mb-3">
               Welcome and <span className="text-white font-semibold" style={{ textDecoration: 'underline', textDecorationColor: '#fbaf1b', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>Join Us for Success</span>
             </p>
-            <h1 style={{ fontSize: '44px', lineHeight: '58px', color: '#ffffff', fontWeight: '700' }} className="hero-text-2 mb-5 drop-shadow-lg">
-              Your Gateway to<br />Studying Abroad
+            <h1 style={{ fontSize: '38px', lineHeight: '48px', color: '#ffffff', fontWeight: '700' }} className="hero-text-2 mb-5 drop-shadow-lg">
+              Your Gateway to Studying Abroad
             </h1>
-            <p className="hero-text-3 text-gray-300 text-sm lg:text-base leading-relaxed mb-8 max-w-md">
+            <p className="hero-text-3 mb-8 max-w-md" style={{ fontSize: '14px', color: '#ffffff', fontWeight: '400', lineHeight: '1.6' }}>
               We provide a complete admissions service for Australia, Canada, Europe, UK, USA and other countries.
             </p>
             <div className="hero-text-4 flex flex-wrap gap-3">
@@ -112,7 +113,7 @@ export default function HomePage() {
                 <Users size={15} /> Be a Partner
               </a>
               <a href="https://globalgroupofeducationportal.com/student-registration" target="_blank" rel="noreferrer"
-                className="btn-slide inline-flex items-center gap-2 bg-white/10 border border-white text-white font-medium text-sm px-5 py-2.5 rounded-md">
+                className="btn-slide inline-flex items-center gap-2 bg-white text-[#0b1a37] font-medium text-sm px-5 py-2.5 rounded-md border border-white">
                 <GraduationCap size={15} /> Be a Student
               </a>
             </div>
@@ -186,52 +187,7 @@ export default function HomePage() {
         </div>
       </section>
       {/* ── 3. Our Services ── */}
-      <section className="bg-white py-8">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-
-          {/* Same header style as GLOBAL ADMISSIONS section */}
-          <div className="text-center mb-6">
-            <span className="inline-flex items-center gap-2 bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
-              <Award size={13} /> What We Offer
-            </span>
-            <h2 className="text-[#0b1a37] font-semibold">Our Services,</h2>
-            <div className="w-12 h-1 bg-[#fbaf1b] rounded-full mx-auto mt-3 mb-3"></div>
-            <p className="text-gray-500 text-sm max-w-xl mx-auto">Global Group of Education helps you get admission in your preferred university.</p>
-          </div>
-
-          {/* Same sticky card style as GLOBAL ADMISSIONS */}
-          <div className="sticky-cards flex flex-col gap-0">
-            {services.map((s, i) => (
-              <div key={s.title}
-                style={{ top: '80px' }}
-                className={`sticky rounded-xl border border-[#fbaf1b]/20 p-8 lg:p-10 flex flex-col lg:flex-row gap-8 items-start mb-4
-                  ${i === services.length - 1 ? 'shadow-[0_2px_8px_rgba(0,0,0,0.04)]' : 'shadow-sm'}
-                  ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}>
-
-                {/* Icon left when even, right when odd */}
-                {i % 2 !== 0 && (
-                  <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#162544] flex items-center justify-center">
-                    <s.Icon size={28} className="text-white" />
-                  </div>
-                )}
-
-                <div className="flex-1">
-                  <h3 className="text-[#0b1a37] font-semibold mb-2">{s.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
-                </div>
-
-                {i % 2 === 0 && (
-                  <div className="flex-shrink-0 w-16 h-16 rounded-xl bg-[#162544] flex items-center justify-center">
-                    <s.Icon size={28} className="text-white" />
-                  </div>
-                )}
-
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
+      <ServicesSection />
 
       <Testimonials />
 
