@@ -45,7 +45,7 @@ const aboutCards = [
     desc: 'We partner directly with leading universities in the UK, USA, Canada, and Australia to secure lucrative scholarships for our students, easing the financial path to studying abroad.',
     tags: ['UK Vice-Chancellor Awards','USA Merit Scholarships','Canada Dean Grants','Partial & Full Awards'],
     btn: 'Find Scholarships', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
-    img: '/assets/images/cources-bg1.jpg', imgRight: true,
+    img: '/assets/images/scholarshipiamge.jpeg', imgRight: true,
   },
   {
     num: '04', tag: 'Visa Excellence',
