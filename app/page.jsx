@@ -125,7 +125,7 @@ export default function HomePage() {
       <section id="about-section" className="bg-white py-8">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-6">
-            <span className="inline-flex items-center gap-2 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
+            <span className="inline-flex items-center gap-2 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5" style={{ backgroundColor: 'rgba(255,255,255,1)' }}>
               <GraduationCap size={13} /> Complete Education Ecosystem
             </span>
             <h2 className="text-4xl lg:text-5xl font-semibold text-[#0b1a37] leading-tight">
