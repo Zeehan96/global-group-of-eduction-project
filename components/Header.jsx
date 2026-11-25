@@ -58,7 +58,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-[80%] mx-auto px-6 flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
 
           {/* Logo */}
           <Link href="/" onClick={close} className="flex-shrink-0">
