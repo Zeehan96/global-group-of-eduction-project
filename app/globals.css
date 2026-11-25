@@ -12,6 +12,7 @@
   }
   html {
     scroll-behavior: smooth;
+    zoom: 0.85;
   }
   main {
     animation: pageEnter 0.35s ease forwards;
@@ -118,4 +119,5 @@
     @apply bg-white text-gray-900;
   }
 }
+
 

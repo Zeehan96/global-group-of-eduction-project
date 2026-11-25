@@ -71,7 +71,7 @@ export default function Footer() {
     <footer className="bg-[#0b1a37] text-white">
 
       {/* ── Main Grid ── */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="max-w-\[80%\] mx-auto px-6 lg:px-10 py-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
         {/* Brand */}
         <div>
@@ -161,7 +161,7 @@ export default function Footer() {
 
       {/* ── Black bottom strip ── */}
       <div className="bg-[#0a1226] border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col gap-4">
+        <div className="max-w-\[80%\] mx-auto px-6 lg:px-10 py-5 flex flex-col gap-4">
 
           {/* Row 1 — icons + address */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -217,4 +217,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 

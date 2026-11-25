@@ -21,7 +21,7 @@ export default function ServicesSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="relative z-10 max-w-\[80%\] mx-auto px-6 lg:px-10">
 
         {/* Heading */}
         <div className="text-center mb-10">
@@ -75,3 +75,4 @@ export default function ServicesSection() {
     </section>
   );
 }
+

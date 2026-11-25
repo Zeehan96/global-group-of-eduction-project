@@ -81,7 +81,7 @@ export default function PrivacyPolicyPage() {
     <div>
       {/* Banner */}
       <div className="bg-[#0b1a37] py-8 text-white text-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-\[80%\] mx-auto px-6 lg:px-10">
           <span className="inline-flex items-center bg-[#162544] text-white text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
             Legal
           </span>
@@ -94,7 +94,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Intro */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-10">
+      <div className="max-w-\[80%\] mx-auto px-6 lg:px-10 pt-10">
         <p className="text-gray-600 text-sm leading-relaxed border-l-4 border-[#fbaf1b] pl-4 py-1">
           This Privacy Policy explains how Global Group of Education (GGE) collects, uses, stores, shares, and protects your personal data when you use our website or services. We are committed to safeguarding your privacy and ensuring that your personal information is processed securely, transparently, and in accordance with applicable data protection laws.
         </p>
@@ -102,7 +102,7 @@ export default function PrivacyPolicyPage() {
 
       {/* Content */}
       <section className="bg-gray-50 py-10 mt-6">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-\[80%\] mx-auto px-6 lg:px-10">
           <div className="bg-white rounded-xl border border-gray-100 shadow-sm px-6 py-6"><div className="flex flex-col gap-4">
             {sections.map((s) => (
               <div key={s.num} className="pb-4 border-b border-gray-100 last:border-0 last:pb-0">
@@ -135,6 +135,7 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+
 
 
 

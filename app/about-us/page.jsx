@@ -25,7 +25,7 @@ export default function AboutUsPage() {
 
       {/* About Section — SS design */}
       <section className="bg-white py-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-\[80%\] mx-auto px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row gap-8 items-start">
 
             {/* Left — 2 stacked images + 10 years badge */}
@@ -77,7 +77,7 @@ export default function AboutUsPage() {
 
       {/* CEO Message */}
       {/* <section className="bg-white py-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-\[80%\] mx-auto px-6 lg:px-10">
           <div className="bg-gray-50 rounded-xl border border-[#fbaf1b]/20 shadow-sm p-8 flex flex-col lg:flex-row gap-8 items-center">
             <div className="flex-shrink-0 flex flex-col items-center gap-3">
               <img src="/assets/images/dr.png" alt="CEO"
@@ -108,3 +108,4 @@ export default function AboutUsPage() {
     </div>
   );
 }
+

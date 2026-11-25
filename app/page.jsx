@@ -96,7 +96,7 @@ export default function HomePage() {
           <div className="absolute inset-0"
             style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.85) 0%, rgba(8,15,36,0.60) 40%, rgba(8,15,36,0.0) 65%, rgba(8,15,36,0.0) 100%)' }} />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20 flex items-center" style={{ minHeight: '500px' }}>
+        <div className="relative z-10 max-w-\[80%\] mx-auto px-6 lg:px-10 py-20 flex items-center" style={{ minHeight: '500px' }}>
           <div className="max-w-lg">
             <p className="hero-text-1 text-sm font-semibold text-white mb-3">
               Welcome and <span className="text-white font-semibold" style={{ textDecoration: 'underline', textDecorationColor: '#fbaf1b', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>Join Us for Success</span>
@@ -123,7 +123,7 @@ export default function HomePage() {
 
       {/* ── 2. About Slider ── */}
       <section id="about-section" className="bg-white py-8">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-\[80%\] mx-auto px-6 lg:px-10">
           <div className="text-center mb-6">
             <span className="inline-flex items-center gap-2 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5" style={{ backgroundColor: 'rgba(255,255,255,1)' }}>
               <GraduationCap size={13} /> Complete Education Ecosystem
@@ -242,6 +242,7 @@ export default function HomePage() {
     </div>
   );
 }
+
 
 
 

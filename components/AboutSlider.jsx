@@ -82,3 +82,4 @@ export default function AboutSlider({ cards }) {
     </div>
   );
 }
+
