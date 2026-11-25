@@ -123,7 +123,7 @@ export default function HomePage() {
 
       {/* ── 2. About Slider ── */}
       <section id="about-section" className="bg-white py-8">
-        <div className="max-w-\[80%\] mx-auto px-6 lg:px-10">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="text-center mb-6">
             <span className="inline-flex items-center gap-2 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5" style={{ backgroundColor: 'rgba(255,255,255,1)' }}>
               <GraduationCap size={13} /> Complete Education Ecosystem
@@ -176,7 +176,6 @@ export default function HomePage() {
                         </div>
                         <div className="flex-1 rounded-xl relative overflow-hidden flex items-center justify-center"
                           style={{ backgroundImage: 'url(/assets/images/about-us-image3.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#f1f5f9' }}>
-                          <div className="absolute inset-0 bg-white/60"></div>
                           <div className="relative z-10 text-center">
                             <p className="text-4xl font-black text-[#0b1a37] leading-none">10</p>
                             <p className="text-[9px] font-bold text-[#0b1a37] mt-1 tracking-wide uppercase">Years of<br/>Experience</p>

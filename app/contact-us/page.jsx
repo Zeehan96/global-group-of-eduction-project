@@ -83,7 +83,7 @@ export default function ContactUsPage() {
           <img src="/assets/images/contact-us-banner-image.jpg" alt="Contact Us" className="w-full h-full object-cover" />
           <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.65)' }}></div>
         </div>
-        <div className="relative z-10 max-w-\[80%\] mx-auto px-6 lg:px-10 flex flex-col items-center justify-center h-full">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center justify-center h-full">
           <span className="inline-flex items-center bg-[#fbaf1b]/20 text-[#fbaf1b] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
             Get In Touch
           </span>
@@ -95,7 +95,7 @@ export default function ContactUsPage() {
       </div>
 
       <section className="bg-gray-50 py-10">
-        <div className="max-w-\[80%\] mx-auto px-6 lg:px-10 flex flex-col gap-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col gap-8">
 
           {/* Contact Form */}
           <div className="bg-white rounded-xl border border-[#fbaf1b]/30 shadow-sm px-8 py-8">
