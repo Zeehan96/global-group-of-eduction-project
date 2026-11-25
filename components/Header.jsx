@@ -58,11 +58,11 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
+        <div className="w-full px-6 lg:px-16 flex items-center justify-between h-20">
 
           {/* Logo */}
           <Link href="/" onClick={close} className="flex-shrink-0">
-            <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-11 w-auto object-contain" />
+            <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-14 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
