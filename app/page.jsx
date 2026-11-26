@@ -139,10 +139,8 @@ export default function HomePage() {
           <div className="sticky-cards flex flex-col gap-0">
             {aboutCards.map((c, i) => (
               <div key={c.num}
-                style={{ top: '80px' }}
-                className={`sticky rounded-xl border border-[#fbaf1b]/20 mb-4
-                  ${i === aboutCards.length - 1 ? 'shadow-[0_2px_8px_rgba(0,0,0,0.04)]' : 'shadow-sm'}
-                  bg-white
+                style={{ top: '80px', zIndex: i + 1, marginBottom: i === aboutCards.length - 1 ? '0' : '-1px' }}
+                className={`sticky rounded-xl border border-[#fbaf1b]/20 bg-white shadow-sm mb-4
                   ${c.num === '01' ? 'block' : 'p-8 lg:p-10 flex flex-col lg:flex-row gap-10 items-center'}`}>
 
                 {/* ── Card 01: text left, images right ── */}
