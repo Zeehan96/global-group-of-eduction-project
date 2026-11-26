@@ -193,7 +193,7 @@ export default function HomePage() {
                   <>
                     {/* Image left */}
                     {!c.imgRight && (
-                      <div className="flex-shrink-0 relative" style={{ width: '45%' }}>
+                      <div className="flex-shrink-0 relative w-full lg:w-[45%]">
                         <div className="absolute inset-0 bg-white" style={{ transform: 'translate(8px, 8px)', boxShadow: '0 8px 30px rgba(0,0,0,0.10)' }}></div>
                         <div className="relative overflow-hidden" style={{ height: '320px' }}>
                           <img src={c.img} alt={c.tag}
@@ -227,7 +227,7 @@ export default function HomePage() {
 
                     {/* Image right */}
                     {c.imgRight && (
-                      <div className="flex-shrink-0 relative" style={{ width: '45%' }}>
+                      <div className="flex-shrink-0 relative w-full lg:w-[45%]">
                         <div className="absolute inset-0 bg-white" style={{ transform: 'translate(-8px, 8px)', boxShadow: '0 8px 30px rgba(0,0,0,0.10)' }}></div>
                         <div className="relative overflow-hidden" style={{ height: '320px' }}>
                           <img src={c.img} alt={c.tag}
