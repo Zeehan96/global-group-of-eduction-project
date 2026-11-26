@@ -77,8 +77,8 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <Link href="/">
-            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-md mb-4">
-              <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-9 w-9 object-contain" />
+            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center shadow-md mb-6">
+              <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-13 w-13 object-contain p-1" />
             </div>
           </Link>
           <p className="text-gray-400 text-sm leading-relaxed mb-5">
