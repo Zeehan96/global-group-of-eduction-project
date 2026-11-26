@@ -9,14 +9,13 @@ import {
 } from 'lucide-react';
 
 const destinations = [
-  { label: 'Study in UK',          href: '/study-in-uk' },
-  { label: 'Study in USA',         href: '/study-in-usa' },
-  { label: 'Study in Canada',      href: '/study-in-canada' },
   { label: 'Study in Australia',   href: '/study-in-australia' },
-  { label: 'Study in Hungary',     href: '/study-in-hungary' },
-  { label: 'Study in UAE',         href: '/study-in-uae' },
+  { label: 'Study in Canada',      href: '/study-in-canada' },
   { label: 'Study in Europe',      href: '/study-in-europe' },
   { label: 'Study in New Zealand', href: '/study-in-new-zealand' },
+  { label: 'Study in UAE',         href: '/study-in-uae' },
+  { label: 'Study in UK',          href: '/study-in-uk' },
+  { label: 'Study in USA',         href: '/study-in-usa' },
 ];
 
 export default function Header() {

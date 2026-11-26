@@ -25,7 +25,7 @@ const aboutCards = [
     title: 'GLOBAL GROUP OF\nEDUCATION',
     sub: '10+ Years of Excellence & Trusted Guidance',
     desc: 'In this era of educational competition, Global Group of Education brings you the finest consultants to help you achieve your desired degree from one of the best institutes in the UK and world top-ranked universities.',
-    tags: ['21+ Countries','639+ Universities','63541+ Courses','5570+ Satisfied Students','100+ Trusted Partners'],
+    tags: ['21+ Countries','639+ Universities','63541+ Courses','5570+ Students','100+ Trusted Partners'],
     btn: 'Explore Our Portal', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: '/assets/images/steps.jpg', imgRight: true,
   },
@@ -36,14 +36,14 @@ const aboutCards = [
     desc: 'We help you choose the right universities and handle accommodation, travel, and pre-departure preparations for a smooth transition to higher education abroad.',
     tags: ['Course Shortlisting','Ranking & Budget Matching','Accommodation Support','Pre-Departure Briefings'],
     btn: 'Apply to University', btnHref: 'https://globalgroupofeducationportal.com/student-registration', external: true,
-    img: '/assets/images/college-students-cramming-outdoor.jpg', imgRight: false,
+    img: '/assets/images/univerity-cosultance.jpg', imgRight: false,
   },
   {
     num: '03', tag: 'Financial Aid & Grants',
     title: 'SCHOLARSHIPS AT TOP\nUNIVERSITIES',
     sub: 'Merit & Need-Based Funding up to £10,000',
     desc: 'We partner directly with leading universities in the UK, USA, Canada, and Australia to secure lucrative scholarships for our students, easing the financial path to studying abroad.',
-    tags: ['UK Vice-Chancellor Awards','USA Merit Scholarships','Canada Dean Grants','Partial & Full Awards'],
+    tags: ['UK Vice-Chancellor Awards','USA Merit Scholarships','Canada Dean Grants','Partial & Full Awards','British Council Scholarships','Erasmus Mundus Awards'],
     btn: 'Find Scholarships', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: '/assets/images/scholarshipiamge.jpeg', imgRight: true,
   },
@@ -54,7 +54,7 @@ const aboutCards = [
     desc: 'Our dedicated team will help you secure your study visa, ensuring flawless CAS & I-20 documentation and thorough mock embassy interview preparation.',
     tags: ['CAS & I-20 Processing','Financial Assessment','Mock Embassy Interviews','98% Approval Track Record'],
     btn: 'Book Visa Consultation', btnHref: 'https://api.whatsapp.com/send/?phone=447586588658&text&type=phone_number&app_absent=0', external: true,
-    img: '/assets/images/happy-girl-with-suitcase-passport-isolated-pink-wall-dark-haired-girl-striped-shirt-wearing-striped-casual-t-shirt-being-ready-travel.jpg', imgRight: false,
+    img: '/assets/images/rear-view-hispanic-young-woman-man-looking-countries-globe-while-planning-their-trip-abroad-with-travel-agent.jpg', imgRight: false,
   },
   {
     num: '05', tag: 'Academic Programs',
@@ -63,25 +63,25 @@ const aboutCards = [
     desc: "Find accredited undergraduate degrees, master's programs, PhD research opportunities, and foundation pathway programs across STEM, Business, Healthcare, and Humanities.",
     tags: ['Foundation / Certificate','Diploma / Adv. Diploma','Undergraduate / Bachelors','Pre-Master & Postgraduate','Research / PhD Degrees','Pre-Sessional Programs'],
     btn: 'Open Course Finder', btnHref: 'https://globalgroupofeducationportal.com/courseFinder/index?access=pass', external: true,
-    img: '/assets/images/cources-bg.jpg', imgRight: true,
+    img: '/assets/images/explore-acdmic-course.jpg', imgRight: true,
   },
   {
     num: '06', tag: 'Global Gateways',
     title: 'TOP STUDY\nDESTINATIONS',
-    sub: 'UK, USA, Canada, Australia & Europe',
+    sub: 'Australia, Canada, Europe, New Zealand, UAE, UK, USA & Worldwide',
     desc: 'Choose from premier global education hubs offering post-study work rights, high standard of living, world-renowned faculties, and welcoming multicultural environments.',
-    tags: ['United Kingdom 🇬🇧','United States 🇺🇸','Canada 🇨🇦','Australia 🇦🇺','Europe & UAE 🇪🇺'],
+    tags: ['Australia','Canada','Europe','New Zealand','UAE','United Kingdom','United States'],
     btn: 'Explore Destinations', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
-    img: '/assets/images/why-choose-bg.jpg', imgRight: false,
+    img: '/assets/images/top-study-dest.jpg', imgRight: false,
   },
   {
     num: '07', tag: 'Global Impact',
     title: 'WE HELP STUDENTS GROW\nTHEIR GLOBAL POTENTIAL',
     sub: 'Empowering Students Across 30+ Nationalities',
     desc: 'We provide complete admissions services for Australia, Canada, Europe, UK, USA and other countries, guiding thousands of ambitious students into rewarding international careers.',
-    tags: ['98% Visa Success Rate','400+ Partner Universities','10+ Years Experience','100% Free Assessment'],
+    tags: ['21+ Countries','639+ Universities','63541+ Courses','5570+ Students','100+ Trusted Partners'],
     btn: 'Start Free Assessment', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
-    img: '/assets/images/user-graduates-banner.jpg', imgRight: true,
+    img: '/assets/images/we-help.jpg', imgRight: true,
   },
 ];
 
@@ -166,7 +166,7 @@ export default function HomePage() {
                     </div>
                     {/* Images right */}
                     <div className="flex-1 w-full min-w-0">
-                      <div className="flex gap-2" style={{ height: '220px' }}>
+                      <div className="flex gap-2" style={{ height: '320px' }}>
                         <div className="overflow-hidden rounded-xl" style={{ flex: '3' }}>
                           <img src="/assets/images/about-us-image1.png" alt="Consultant"
                             className="w-full h-full object-cover object-center" />
@@ -193,13 +193,14 @@ export default function HomePage() {
                   <>
                     {/* Image left */}
                     {!c.imgRight && (
-                      <div className="flex-1 w-full min-w-0 order-first lg:order-first rounded-xl overflow-hidden">
-                        <img src={c.img} alt={c.tag} className="w-full h-auto object-contain transition-transform duration-500 hover:scale-105" />
+                      <div className="flex-shrink-0 rounded-xl overflow-hidden" style={{ width: '45%', height: '320px' }}>
+                        <img src={c.img} alt={c.tag}
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                       </div>
                     )}
 
                     {/* Text */}
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
                       <p className="text-sm font-semibold text-gray-600 mb-3">{c.sub}</p>
                       <p className="text-gray-500 text-sm leading-relaxed mb-5">{c.desc}</p>
@@ -223,8 +224,9 @@ export default function HomePage() {
 
                     {/* Image right */}
                     {c.imgRight && (
-                      <div className="flex-1 w-full min-w-0 rounded-xl overflow-hidden">
-                        <img src={c.img} alt={c.tag} className="w-full h-auto object-contain transition-transform duration-500 hover:scale-105" />
+                      <div className="flex-shrink-0 rounded-xl overflow-hidden" style={{ width: '45%', height: '320px' }}>
+                        <img src={c.img} alt={c.tag}
+                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                       </div>
                     )}
                   </>
