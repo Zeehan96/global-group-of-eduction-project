@@ -57,11 +57,11 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-16">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between" style={{ height: '72px' }}>
 
           {/* Logo */}
           <Link href="/" onClick={close} className="flex-shrink-0">
-            <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-11 w-auto object-contain" />
+            <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-16 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
