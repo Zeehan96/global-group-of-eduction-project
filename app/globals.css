@@ -93,6 +93,15 @@
   animation: blink10 1.4s ease-in-out infinite;
 }
 
+/* Request a call hover */
+.call-btn {
+  background-color: #162544;
+  transition: background-color 0.3s ease;
+}
+.call-btn:hover {
+  background-color: #fbaf1b;
+}
+
 /* Service card — bottom to top fill effect */
 .service-card {
   position: relative;

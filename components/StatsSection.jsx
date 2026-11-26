@@ -4,10 +4,11 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Smile, BookOpen, Gift, FileCheck } from 'lucide-react';
 
 const stats = [
-  { Icon: Smile,     val: 4275, suffix: '+', label: 'Happy Students' },
-  { Icon: BookOpen,  val: 3960, suffix: '+', label: "Visa's" },
-  { Icon: Gift,      val: 100,  suffix: '%', label: 'Scholarships' },
-  { Icon: FileCheck, val: 691,  suffix: '+', label: 'Certified Courses' },
+  { Icon: Smile,     val: 21,    suffix: '+', label: 'Countries' },
+  { Icon: BookOpen,  val: 639,   suffix: '+', label: 'Universities' },
+  { Icon: Gift,      val: 63541, suffix: '+', label: 'Courses' },
+  { Icon: FileCheck, val: 5570,  suffix: '+', label: 'Students Satisfaction' },
+  { Icon: Smile,     val: 100,   suffix: '+', label: 'Trusted Partners' },
 ];
 
 function CountUp({ target, suffix, duration = 2000 }) {
@@ -55,7 +56,7 @@ export default function StatsSection() {
       }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col items-center gap-3">
               <div className="w-14 h-14 rounded-xl bg-[#162544]/80 flex items-center justify-center transition-all duration-300 hover:rounded-full hover:bg-[#fbaf1b]">

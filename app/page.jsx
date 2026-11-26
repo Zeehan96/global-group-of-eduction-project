@@ -36,7 +36,7 @@ const aboutCards = [
     desc: 'We help you choose the right universities and handle accommodation, travel, and pre-departure preparations for a smooth transition to higher education abroad.',
     tags: ['Course Shortlisting','Ranking & Budget Matching','Accommodation Support','Pre-Departure Briefings'],
     btn: 'Apply to University', btnHref: 'https://globalgroupofeducationportal.com/student-registration', external: true,
-    img: '/assets/images/univerity-cosultance.jpg', imgRight: false,
+    img: '/assets/images/uni-guide.jpg', imgRight: false,
   },
   {
     num: '03', tag: 'Financial Aid & Grants',
@@ -139,7 +139,7 @@ export default function HomePage() {
           <div className="sticky-cards flex flex-col gap-0">
             {aboutCards.map((c, i) => (
               <div key={c.num}
-                style={{ top: `80px` }}
+                style={{ top: '80px' }}
                 className={`sticky rounded-xl border border-[#fbaf1b]/20 mb-4
                   ${i === aboutCards.length - 1 ? 'shadow-[0_2px_8px_rgba(0,0,0,0.04)]' : 'shadow-sm'}
                   bg-white
@@ -165,7 +165,7 @@ export default function HomePage() {
                       </a>
                     </div>
                     {/* Images right */}
-                    <div className="flex-1 w-full min-w-0">
+                    <div className="flex-1 w-full min-w-0 relative">
                       <div className="flex gap-2" style={{ height: '320px' }}>
                         <div className="overflow-hidden rounded-xl" style={{ flex: '3' }}>
                           <img src="/assets/images/about-us-image1.png" alt="Consultant"
@@ -193,9 +193,12 @@ export default function HomePage() {
                   <>
                     {/* Image left */}
                     {!c.imgRight && (
-                      <div className="flex-shrink-0 rounded-xl overflow-hidden" style={{ width: '45%', height: '320px' }}>
-                        <img src={c.img} alt={c.tag}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                      <div className="flex-shrink-0 relative" style={{ width: '45%' }}>
+                        <div className="absolute inset-0 bg-white" style={{ transform: 'translate(8px, 8px)', boxShadow: '0 8px 30px rgba(0,0,0,0.10)' }}></div>
+                        <div className="relative overflow-hidden" style={{ height: '320px' }}>
+                          <img src={c.img} alt={c.tag}
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                        </div>
                       </div>
                     )}
 
@@ -224,9 +227,12 @@ export default function HomePage() {
 
                     {/* Image right */}
                     {c.imgRight && (
-                      <div className="flex-shrink-0 rounded-xl overflow-hidden" style={{ width: '45%', height: '320px' }}>
-                        <img src={c.img} alt={c.tag}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                      <div className="flex-shrink-0 relative" style={{ width: '45%' }}>
+                        <div className="absolute inset-0 bg-white" style={{ transform: 'translate(-8px, 8px)', boxShadow: '0 8px 30px rgba(0,0,0,0.10)' }}></div>
+                        <div className="relative overflow-hidden" style={{ height: '320px' }}>
+                          <img src={c.img} alt={c.tag}
+                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
+                        </div>
                       </div>
                     )}
                   </>

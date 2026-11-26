@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Phone, Mail, Send, CheckCircle } from 'lucide-react';
-import Testimonials from '../../components/Testimonials';
+import { Phone, Mail, Send, CheckCircle, PhoneCall } from 'lucide-react';
 
 function ContactForm() {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', subject: '', message: '' });
@@ -66,7 +65,7 @@ function ContactForm() {
       </div>
       <div>
         <button type="submit" disabled={loading}
-          className="btn-slide inline-flex items-center gap-2 bg-[#162544] text-white font-medium text-sm px-6 py-3 rounded-md border border-[#162544] disabled:opacity-60">
+          className="inline-flex items-center gap-2 bg-[#162544] hover:bg-[#fbaf1b] hover:text-[#162544] hover:border-[#fbaf1b] text-white font-medium text-sm px-6 py-3 rounded-md border border-[#162544] transition-all duration-300 disabled:opacity-60">
           {loading ? 'Sending...' : <><span>Send Message</span><Send size={14} /></>}
         </button>
       </div>
@@ -77,17 +76,15 @@ function ContactForm() {
 export default function ContactUsPage() {
   return (
     <div>
-      {/* Banner */}
-      <div className="relative py-20 text-white text-center overflow-hidden" style={{ minHeight: '300px' }}>
+      {/* Banner — full image, no crop */}
+      <div className="relative text-white text-center overflow-hidden" style={{ minHeight: '480px' }}>
         <div className="absolute inset-0 z-0">
-          <img src="/assets/images/contact-us-banner-image.jpg" alt="Contact Us" className="w-full h-full object-cover" />
+          <img src="/assets/images/contact-us-banner-image.jpg" alt="Contact Us"
+            className="w-full h-full object-cover object-top" />
           <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.65)' }}></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center justify-center h-full">
-          <span className="inline-flex items-center bg-[#fbaf1b]/20 text-[#fbaf1b] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-4">
-            Get In Touch
-          </span>
-          <h1 className="text-white mt-2" style={{ fontSize: '44px', lineHeight: '54px', fontWeight: '700' }}>Contact Us</h1>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center justify-center py-20" style={{ minHeight: '480px' }}>
+          <h1 className="text-white" style={{ fontSize: '44px', lineHeight: '54px', fontWeight: '700' }}>Contact Us</h1>
           <p style={{ fontSize: '14px', color: '#ffffff', fontWeight: '400' }} className="max-w-xl mx-auto mt-4">
             Reach out to our expert team for 100% free counselling, university selection, and visa guidance.
           </p>
@@ -99,11 +96,35 @@ export default function ContactUsPage() {
 
           {/* Contact Form */}
           <div className="bg-white rounded-xl border border-[#fbaf1b]/30 shadow-sm px-8 py-8">
-            <span className="inline-flex items-center bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3">
+            <span className="inline-flex items-center text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
               Send Us a Message
             </span>
             <h2 className="text-2xl font-bold text-[#0b1a37] mb-6">Contact With Us</h2>
             <ContactForm />
+
+            {/* Request A Call bar */}
+            <div className="mt-6 flex items-center justify-center">
+              <div className="flex flex-col sm:flex-row items-center justify-between border border-[#102771] py-3 px-4 w-full" style={{ backgroundColor: '#f7f7f7' }}>
+                <p className="text-gray-600 text-sm font-medium text-center sm:text-left mb-3 sm:mb-0">We provide full guidance to our students globally</p>
+                <div className="flex items-center flex-shrink-0">
+                  <span className="hidden sm:inline text-[#0b1a37] font-bold text-sm whitespace-nowrap mx-8">Request A Call</span>
+                  <a href="tel:+447586589659"
+                    className="flex items-center px-6 py-2 gap-3 transition-all duration-300 overflow-visible"
+                    style={{ backgroundColor: '#162544' }}
+                    onMouseEnter={e => e.currentTarget.style.backgroundColor = '#fbaf1b'}
+                    onMouseLeave={e => e.currentTarget.style.backgroundColor = '#162544'}>
+                    <div className="flex items-center justify-center rounded-full bg-white flex-shrink-0 -ml-11"
+                      style={{ width: '54px', height: '54px', boxShadow: '0 0 20px 0 rgba(0,0,0,0.1)' }}>
+                      <Phone size={20} color="#162544" fill="#162544" />
+                    </div>
+                    <span className="text-white font-bold whitespace-nowrap"
+                      style={{ fontSize: '16px', lineHeight: '1' }}>
+                      +44 7586589659
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Office Maps */}
@@ -112,7 +133,7 @@ export default function ContactUsPage() {
             {/* Pakistan Office */}
             <div className="bg-white rounded-xl border border-[#fbaf1b]/30 shadow-sm overflow-hidden">
               <div className="px-6 py-5 border-b border-gray-100">
-                <span className="inline-flex items-center bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3">
+                <span className="inline-flex items-center text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
                   Pakistan
                 </span>
                 <h3 className="text-lg font-bold text-[#0b1a37] mb-2">Pakistan Office</h3>
@@ -137,7 +158,7 @@ export default function ContactUsPage() {
             {/* UK Office */}
             <div className="bg-white rounded-xl border border-[#fbaf1b]/30 shadow-sm overflow-hidden">
               <div className="px-6 py-5 border-b border-gray-100">
-                <span className="inline-flex items-center bg-[#fbaf1b]/20 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3">
+                <span className="inline-flex items-center text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
                   United Kingdom
                 </span>
                 <h3 className="text-lg font-bold text-[#0b1a37] mb-2">UK Office</h3>
@@ -163,8 +184,6 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      {/* <Testimonials /> */}
     </div>
   );
 }
-

@@ -203,7 +203,7 @@ const destinationData = {
     ],
   },
   'study-in-new-zealand': {
-    banner: '/assets/images/study-incountry-images/study-in-europe.jpg',
+    banner: '/assets/images/study-incountry-images/styudy-in-nz.jpg',
     flag: '🇳🇿',
     country: 'New Zealand',
     desc: 'All 8 New Zealand universities rank in the world\'s top 3%. Enjoy post-study work rights up to 3 years and a clear pathway to permanent residency.',
@@ -235,7 +235,7 @@ const destinationData = {
 export async function generateStaticParams() {
   const pages = getTopLevelPages();
   return pages
-    .filter((p) => p.slug !== 'about-us')
+    .filter((p) => p.slug !== 'about-us' && p.slug !== 'contact-us')
     .map((p) => ({ slug: p.slug }));
 }
 
@@ -273,16 +273,17 @@ export default async function DynamicSlugPage({ params }) {
   return (
     <div>
       {/* Banner */}
-      <div className="relative py-20 text-white text-center overflow-hidden" style={{ minHeight: '340px' }}>
+      <div className="relative text-white text-center overflow-hidden" style={{ minHeight: '460px' }}>
         <div className="absolute inset-0 z-0">
           <img
             src={destInfo?.banner || '/assets/images/about-bg.jpg'}
             alt={page.cleanTitle}
             className="w-full h-full object-cover"
+            fetchPriority="high"
           />
           <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.70)' }}></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center justify-center h-full">
+        <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 lg:px-10">
           <h1 style={{ fontSize: '44px', lineHeight: '54px', fontWeight: '700', color: '#fff' }}>{formattedTitle}</h1>
           {(destInfo?.desc || page.meta_description) && (
             <p style={{ fontSize: '14px', color: '#fff', fontWeight: '400' }} className="max-w-2xl mx-auto mt-4 leading-relaxed">{destInfo?.desc || page.meta_description}</p>
@@ -299,12 +300,19 @@ export default async function DynamicSlugPage({ params }) {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {destInfo.highlights.map((h) => (
-                <div key={h.title} className="bg-white rounded-xl border border-[#fbaf1b]/20 p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all">
-                  <div className="w-11 h-11 rounded-lg bg-[#162544] flex items-center justify-center mb-3">
-                    <h.icon size={20} className="text-white" />
+                <div key={h.title} className="group relative bg-white rounded-xl border border-[#fbaf1b]/20 p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all overflow-hidden">
+                  {/* bg image on hover */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
+                    style={{ backgroundImage: `url(${destInfo.banner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                    <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.75)' }}></div>
                   </div>
-                  <h3 className="text-[#0b1a37] font-semibold text-sm mb-1">{h.title}</h3>
-                  <p className="text-gray-500 text-xs leading-relaxed">{h.desc}</p>
+                  <div className="relative z-10">
+                    <div className="w-11 h-11 rounded-lg bg-[#162544] group-hover:bg-[#fbaf1b] flex items-center justify-center mb-3 transition-colors duration-300">
+                      <h.icon size={20} className="text-white" />
+                    </div>
+                    <h3 className="text-[#0b1a37] group-hover:text-white font-semibold text-sm mb-1 transition-colors duration-300">{h.title}</h3>
+                    <p className="text-gray-500 group-hover:text-gray-200 text-xs leading-relaxed transition-colors duration-300">{h.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
