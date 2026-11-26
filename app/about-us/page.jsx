@@ -41,10 +41,10 @@ export default function AboutUsPage() {
                 className="w-full object-cover rounded-t-xl" style={{ height: '360px' }} />
               <div className="relative overflow-hidden rounded-b-xl" style={{ height: '180px' }}>
                 <img src="/assets/images/about-us-image3.png" alt="World Map"
-                  className="w-full h-full object-cover" />
+                  className="w-full h-full object-cover" style={{ filter: 'brightness(0.6)' }} />
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-5xl font-bold text-[#0b1a37]">10</span>
-                  <span className="text-sm font-semibold text-gray-600 mt-1 tracking-widest uppercase text-center leading-tight">Years Of<br/>Experience</span>
+                  <span className="blink-10 text-5xl font-bold text-[#0b1a37]">10</span>
+                  <span className="text-sm font-semibold text-[#0b1a37] mt-1 tracking-widest uppercase text-center leading-tight">Years Of<br/>Experience</span>
                 </div>
               </div>
             </div>

@@ -57,7 +57,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between" style={{ height: '72px' }}>
+        <div className="w-full px-6 lg:px-10 flex items-center justify-between" style={{ height: '72px' }}>
 
           {/* Logo */}
           <Link href="/" onClick={close} className="flex-shrink-0">
@@ -68,6 +68,13 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-1">
 
             {navLink('/', Home, 'Home')}
+
+            <a href="https://globalgroupofeducationportal.com/courseFinder/index?access=pass"
+              target="_blank" rel="noreferrer"
+              className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold transition-colors text-[#162447] hover:text-[#fbaf1b]">
+              <BookOpen size={15} />
+              Courses
+            </a>
 
             <div
               className="relative"
@@ -99,7 +106,6 @@ export default function Header() {
               )}
             </div>
 
-            {navLink('https://globalgroupofeducationportal.com/courseFinder/index?access=pass', BookOpen, 'Courses')}
             {navLink('/#about-section', Handshake, 'Our Services')}
             {navLink('/about-us', Info, 'About Us')}
             {navLink('/contact-us', Phone, 'Contact Us')}

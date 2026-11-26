@@ -90,13 +90,13 @@ export default function HomePage() {
     <div>
 
       {/* ── 1. Hero ── */}
-      <section className="relative overflow-hidden bg-[#0b1a37]" style={{ minHeight: '500px' }}>
+      <section className="relative overflow-hidden bg-[#0b1a37]" style={{ minHeight: '560px' }}>
         <div className="absolute inset-0 z-0">
           <HeroVideo />
           <div className="absolute inset-0"
             style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.85) 0%, rgba(8,15,36,0.60) 40%, rgba(8,15,36,0.0) 65%, rgba(8,15,36,0.0) 100%)' }} />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20 flex items-center" style={{ minHeight: '500px' }}>
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20 flex items-center" style={{ minHeight: '560px' }}>
           <div className="max-w-lg">
             <p className="hero-text-1 text-sm font-semibold text-white mb-3">
               Welcome and <span className="text-white font-semibold" style={{ textDecoration: 'underline', textDecorationColor: '#fbaf1b', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>Join Us for Success</span>
@@ -123,8 +123,8 @@ export default function HomePage() {
 
       {/* ── 2. About Slider ── */}
       <section id="about-section" className="bg-white py-8">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
-          <div className="text-center mb-6">
+        <div className="px-0" style={{ width: '100%' }}>
+          <div className="text-center mb-6 px-6 lg:px-10">
             <span className="inline-flex items-center gap-2 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5" style={{ backgroundColor: 'rgba(255,255,255,1)' }}>
               <GraduationCap size={13} /> Complete Education Ecosystem
             </span>
@@ -136,16 +136,16 @@ export default function HomePage() {
             </p>
           </div>
           {/* Sticky scroll cards */}
-          <div className="sticky-cards flex flex-col gap-0">
+          <div className="sticky-cards flex flex-col gap-0 px-6 lg:px-10">
             {aboutCards.map((c, i) => (
               <div key={c.num}
                 style={{ top: '80px', zIndex: i + 1, marginBottom: i === aboutCards.length - 1 ? '0' : '-1px' }}
-                className={`sticky rounded-xl border border-[#fbaf1b]/20 bg-white shadow-sm mb-4
-                  ${c.num === '01' ? 'block' : 'p-8 lg:p-10 flex flex-col lg:flex-row gap-10 items-center'}`}>
+                className={`sticky border border-[#fbaf1b]/30 bg-white shadow-sm mb-4
+                  ${c.num === '01' ? 'block' : 'px-6 lg:px-10 py-8 lg:py-10 flex flex-col lg:flex-row gap-10 items-center'}`}>
 
                 {/* ── Card 01: text left, images right ── */}
                 {c.num === '01' && (
-                  <div className="flex flex-col lg:flex-row gap-8 items-center p-8 lg:p-10">
+                  <div className="flex flex-col lg:flex-row gap-8 items-center px-6 lg:px-10 py-8 lg:py-10">
                     {/* Text left */}
                     <div className="flex-1">
                       <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
@@ -192,8 +192,7 @@ export default function HomePage() {
                     {/* Image left */}
                     {!c.imgRight && (
                       <div className="flex-shrink-0 relative w-full lg:w-[45%]">
-                        <div className="absolute inset-0 bg-white" style={{ transform: 'translate(8px, 8px)', boxShadow: '0 8px 30px rgba(0,0,0,0.10)' }}></div>
-                        <div className="relative overflow-hidden" style={{ height: '320px' }}>
+                        <div className="relative" style={{ height: '320px' }}>
                           <img src={c.img} alt={c.tag}
                             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                         </div>
@@ -226,8 +225,7 @@ export default function HomePage() {
                     {/* Image right */}
                     {c.imgRight && (
                       <div className="flex-shrink-0 relative w-full lg:w-[45%]">
-                        <div className="absolute inset-0 bg-white" style={{ transform: 'translate(-8px, 8px)', boxShadow: '0 8px 30px rgba(0,0,0,0.10)' }}></div>
-                        <div className="relative overflow-hidden" style={{ height: '320px' }}>
+                        <div className="relative" style={{ height: '320px' }}>
                           <img src={c.img} alt={c.tag}
                             className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
                         </div>
