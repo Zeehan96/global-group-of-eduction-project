@@ -84,6 +84,15 @@
   }
 }
 
+/* 10 years blink animation */
+@keyframes blink10 {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.15; }
+}
+.blink-10 {
+  animation: blink10 1.4s ease-in-out infinite;
+}
+
 /* Service card — bottom to top fill effect */
 .service-card {
   position: relative;

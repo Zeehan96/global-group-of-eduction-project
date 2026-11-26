@@ -25,7 +25,7 @@ const aboutCards = [
     title: 'GLOBAL GROUP OF\nEDUCATION',
     sub: '10+ Years of Excellence & Trusted Guidance',
     desc: 'In this era of educational competition, Global Group of Education brings you the finest consultants to help you achieve your desired degree from one of the best institutes in the UK and world top-ranked universities.',
-    tags: ['10+ Years Experience','98% Visa Success Rate','30+ Partner Universities','5000+ Students Placed'],
+    tags: ['21+ Countries','639+ Universities','63541+ Courses','5570+ Satisfied Students','100+ Trusted Partners'],
     btn: 'Explore Our Portal', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: '/assets/images/steps.jpg', imgRight: true,
   },
@@ -61,7 +61,7 @@ const aboutCards = [
     title: 'EXPLORE ACADEMIC\nCOURSES',
     sub: 'Undergraduate, Postgraduate & PhD Degrees',
     desc: "Find accredited undergraduate degrees, master's programs, PhD research opportunities, and foundation pathway programs across STEM, Business, Healthcare, and Humanities.",
-    tags: ['Doctorate / PhD Degrees','Postgraduate / Masters','Undergraduate / Bachelors','Pre-Master & Foundation'],
+    tags: ['Foundation / Certificate','Diploma / Adv. Diploma','Undergraduate / Bachelors','Pre-Master & Postgraduate','Research / PhD Degrees','Pre-Sessional Programs'],
     btn: 'Open Course Finder', btnHref: 'https://globalgroupofeducationportal.com/courseFinder/index?access=pass', external: true,
     img: '/assets/images/cources-bg.jpg', imgRight: true,
   },
@@ -142,7 +142,7 @@ export default function HomePage() {
                 style={{ top: `80px` }}
                 className={`sticky rounded-xl border border-[#fbaf1b]/20 mb-4
                   ${i === aboutCards.length - 1 ? 'shadow-[0_2px_8px_rgba(0,0,0,0.04)]' : 'shadow-sm'}
-                  ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}
+                  bg-white
                   ${c.num === '01' ? 'block' : 'p-8 lg:p-10 flex flex-col lg:flex-row gap-10 items-center'}`}>
 
                 {/* ── Card 01: text left, images right ── */}
@@ -153,9 +153,10 @@ export default function HomePage() {
                       <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
                       <p className="text-sm font-semibold text-gray-600 mb-3">{c.sub}</p>
                       <p className="text-gray-500 text-sm leading-relaxed mb-5">{c.desc}</p>
+                      {/* Stats chips */}
                       <div className="flex flex-wrap gap-2 mb-5">
-                        {c.tags.map(t => (
-                          <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-3 py-1 rounded-md hover:bg-[#fbaf1b] hover:text-white hover:border-[#fbaf1b] transition-colors cursor-default">{t}</span>
+                        {c.tags.map((t) => (
+                          <span key={t} className="border border-gray-300 text-gray-700 text-xs font-semibold px-2.5 py-1 rounded-md hover:bg-[#fbaf1b] hover:text-white hover:border-[#fbaf1b] transition-colors cursor-default whitespace-nowrap">{t}</span>
                         ))}
                       </div>
                       <a href={c.btnHref} target="_blank" rel="noreferrer"
@@ -166,18 +167,19 @@ export default function HomePage() {
                     {/* Images right */}
                     <div className="flex-1 w-full min-w-0">
                       <div className="flex gap-2" style={{ height: '220px' }}>
-                        <div className="flex-1 overflow-hidden rounded-xl">
+                        <div className="overflow-hidden rounded-xl" style={{ flex: '3' }}>
                           <img src="/assets/images/about-us-image1.png" alt="Consultant"
                             className="w-full h-full object-cover object-center" />
                         </div>
-                        <div className="flex-1 overflow-hidden rounded-xl">
+                        <div className="overflow-hidden rounded-xl" style={{ flex: '3' }}>
                           <img src="/assets/images/about-us-img2.png" alt="Graduate"
                             className="w-full h-full object-cover object-top" />
                         </div>
-                        <div className="flex-1 rounded-xl relative overflow-hidden flex items-center justify-center"
-                          style={{ backgroundImage: 'url(/assets/images/about-us-image3.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#f1f5f9' }}>
+                        <div className="rounded-xl relative overflow-hidden flex items-center justify-center" style={{ flex: '2',
+                          backgroundImage: 'url(/assets/images/about-us-image3.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#e2e8f0' }}>
+                          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.18)' }}></div>
                           <div className="relative z-10 text-center">
-                            <p className="text-4xl font-black text-[#0b1a37] leading-none">10</p>
+                            <p className="blink-10 text-4xl font-black text-[#0b1a37] leading-none">10</p>
                             <p className="text-[9px] font-bold text-[#0b1a37] mt-1 tracking-wide uppercase">Years of<br/>Experience</p>
                           </div>
                         </div>
@@ -191,8 +193,8 @@ export default function HomePage() {
                   <>
                     {/* Image left */}
                     {!c.imgRight && (
-                      <div className="flex-1 w-full min-w-0 order-first lg:order-first">
-                        <img src={c.img} alt={c.tag} className="w-full h-72 object-cover rounded-xl" />
+                      <div className="flex-1 w-full min-w-0 order-first lg:order-first rounded-xl overflow-hidden">
+                        <img src={c.img} alt={c.tag} className="w-full h-auto object-contain transition-transform duration-500 hover:scale-105" />
                       </div>
                     )}
 
@@ -221,8 +223,8 @@ export default function HomePage() {
 
                     {/* Image right */}
                     {c.imgRight && (
-                      <div className="flex-1 w-full min-w-0">
-                        <img src={c.img} alt={c.tag} className="w-full h-72 object-cover rounded-xl" />
+                      <div className="flex-1 w-full min-w-0 rounded-xl overflow-hidden">
+                        <img src={c.img} alt={c.tag} className="w-full h-auto object-contain transition-transform duration-500 hover:scale-105" />
                       </div>
                     )}
                   </>
