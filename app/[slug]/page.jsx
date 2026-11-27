@@ -404,7 +404,7 @@ export default async function DynamicSlugPage({ params }) {
             {destInfo.contentCards.map((card, i) => (
               <div key={i}
                 style={{ top: '80px', zIndex: i + 1 }}
-                className={`sticky flex flex-col lg:flex-row items-stretch bg-white rounded-xl border border-gray-100 shadow-md overflow-hidden ${i % 2 !== 0 ? '' : 'lg:flex-row-reverse'}`}>
+                className={`lg:sticky flex flex-col lg:flex-row items-stretch bg-white rounded-xl border border-gray-100 shadow-md overflow-hidden ${i % 2 !== 0 ? '' : 'lg:flex-row-reverse'}`}>
                 {/* Image */}
                 <div className="flex-shrink-0 w-full lg:w-[42%] p-4 overflow-hidden rounded-xl">
                   <img src={card.img} alt={card.title} className="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-[1.03]" style={{ minHeight: '280px', maxHeight: '320px' }} />

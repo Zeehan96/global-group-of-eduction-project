@@ -141,7 +141,7 @@ export default function HomePage() {
             {aboutCards.map((c, i) => (
               <div key={c.num}
                 style={{ top: '80px', zIndex: i + 1 }}
-                className={`sticky rounded-xl border border-gray-100 bg-white shadow-md
+                className={`lg:sticky rounded-xl border border-gray-100 bg-white shadow-md
                   ${c.num === '01' ? 'block' : 'p-8 lg:p-10 flex flex-col lg:flex-row gap-10 items-center'}`}>
 
                 {/* ── Card 01: text left, images right ── */}
