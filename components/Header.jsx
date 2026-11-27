@@ -56,16 +56,16 @@ export default function Header() {
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-sm border-b border-gray-100">
-        <div className="w-full px-6 lg:px-10 flex items-center justify-between" style={{ height: '72px' }}>
+      <header className="sticky top-0 z-[500] bg-white shadow-sm border-b border-gray-100">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 flex items-center justify-between flex-nowrap w-full" style={{ height: '72px' }}>
 
           {/* Logo */}
           <Link href="/" onClick={close} className="flex-shrink-0">
-            <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-16 w-auto object-contain" />
+            <img src="/assets/images/bgremoveicon.png" alt="Global Group of Education" className="h-12 lg:h-14 w-auto object-contain" />
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-2 lg:gap-4">
 
             {navLink('/', Home, 'Home')}
 
@@ -92,7 +92,7 @@ export default function Header() {
               </button>
 
               {dropOpen && (
-                <ul className="absolute top-full left-0 w-56 bg-white border border-gray-200 border-t-4 border-t-[#fbaf1b] rounded-b-xl shadow-xl py-2 z-50">
+                <ul className="absolute top-full left-0 w-56 bg-white border border-gray-200 border-t-4 border-t-[#fbaf1b] rounded-b-xl shadow-xl py-2 z-[600]">
                   {destinations.map((d) => (
                     <li key={d.href}>
                       <Link href={d.href} onClick={close}
@@ -134,7 +134,7 @@ export default function Header() {
 
         {/* Mobile Nav Drawer */}
         {menuOpen && (
-          <div className="lg:hidden border-t border-gray-100 bg-white shadow-lg">
+          <div className="lg:hidden fixed left-0 right-0 bg-white shadow-lg border-t border-gray-100 overflow-y-auto" style={{ top: '72px', zIndex: 499, maxHeight: 'calc(100vh - 72px)' }}>
             <ul className="flex flex-col py-2">
 
               {[

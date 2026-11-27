@@ -23,7 +23,6 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>{`body { min-width: 1280px; }`}</style>
       </head>
       <body className="min-h-screen flex flex-col">
         <Header />

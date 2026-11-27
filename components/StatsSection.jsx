@@ -55,7 +55,7 @@ export default function StatsSection() {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col items-center gap-3">

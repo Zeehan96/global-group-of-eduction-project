@@ -8,7 +8,7 @@ import Testimonials from '../../components/Testimonials';
 // Destination specific data
 const destinationData = {
   'study-in-uk': {
-    banner: '/assets/images/study-incountry-images/rear-view-young-man-looking-river-thames.jpg',
+    banner: '/assets/images/study-incountry-images/studyinuk.jpg',
     flag: '🇬🇧',
     country: 'United Kingdom',
     desc: 'Study at Oxford, Cambridge & 100+ world-ranked UK universities. Get expert guidance on admissions, scholarships, and your Student visa from GGE certified counsellors.',
@@ -64,7 +64,7 @@ const destinationData = {
     ],
   },
   'study-in-canada': {
-    banner: '/assets/images/study-incountry-images/study-in-canada.jpg',
+    banner: '/assets/images/study-incountry-images/study-in-can.jpg',
     flag: '🇨🇦',
     country: 'Canada',
     desc: 'Build your future in Canada with a world-class degree from UofT, UBC or McGill. GGE handles your SDS study permit and post-graduation work permit.',
@@ -92,7 +92,7 @@ const destinationData = {
     ],
   },
   'study-in-australia': {
-    banner: '/assets/images/study-incountry-images/study-in-australia.jpg',
+    banner: '/assets/images/study-incountry-images/study-in-aus.jpg',
     flag: '🇦🇺',
     country: 'Australia',
     desc: 'Experience world-class education at ANU, University of Melbourne & Sydney. GGE guides you through your Subclass 500 student visa and post-study work rights.',
@@ -147,7 +147,7 @@ const destinationData = {
     ],
   },
   'study-in-uae': {
-    banner: '/assets/images/study-incountry-images/study-in-uae.jpg',
+    banner: '/assets/images/study-incountry-images/UAEstudy.jpg',
     flag: '🇦🇪',
     country: 'United Arab Emirates',
     desc: 'Study at NYU Abu Dhabi, Heriot-Watt or Middlesex Dubai. Benefit from a tax-free economy, fast admissions, and GGE\'s official UAE university partnerships.',
@@ -294,7 +294,7 @@ export default async function DynamicSlugPage({ params }) {
       {/* Destination highlights cards */}
       {destInfo && (
         <section className="bg-gray-50 py-10">
-          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
             <div className="text-center mb-8">
               <h2 className="text-[#0b1a37] font-semibold">Key Highlights</h2>
             </div>
@@ -322,7 +322,7 @@ export default async function DynamicSlugPage({ params }) {
 
       {/* Content */}
       <section className="bg-white py-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row gap-8">
 
             {/* Main Content */}

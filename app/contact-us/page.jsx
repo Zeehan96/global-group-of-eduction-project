@@ -79,11 +79,11 @@ export default function ContactUsPage() {
       {/* Banner — full image, no crop */}
       <div className="relative text-white text-center overflow-hidden" style={{ minHeight: '480px' }}>
         <div className="absolute inset-0 z-0">
-          <img src="/assets/images/contact-us-banner-image.jpg" alt="Contact Us"
+          <img src="/assets/images/contactusimage.jpg" alt="Contact Us"
             className="w-full h-full object-cover object-top" />
           <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.65)' }}></div>
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 flex flex-col items-center justify-center py-20" style={{ minHeight: '480px' }}>
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-10 flex flex-col items-center justify-center py-20" style={{ minHeight: '480px' }}>
           <h1 className="text-white" style={{ fontSize: '44px', lineHeight: '54px', fontWeight: '700' }}>Contact Us</h1>
           <p style={{ fontSize: '14px', color: '#ffffff', fontWeight: '400' }} className="max-w-xl mx-auto mt-4">
             Reach out to our expert team for 100% free counselling, university selection, and visa guidance.
@@ -92,7 +92,7 @@ export default function ContactUsPage() {
       </div>
 
       <section className="bg-gray-50 py-10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col gap-8">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10 flex flex-col gap-8">
 
           {/* Contact Form */}
           <div className="bg-white rounded-xl border border-[#fbaf1b]/30 shadow-sm px-8 py-8">

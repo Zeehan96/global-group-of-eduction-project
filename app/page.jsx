@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Testimonials from '../components/Testimonials';
 import HeroVideo from '../components/HeroVideo';
 import ServicesSection from '../components/ServicesSection';
@@ -36,7 +37,7 @@ const aboutCards = [
     desc: 'We help you choose the right universities and handle accommodation, travel, and pre-departure preparations for a smooth transition to higher education abroad.',
     tags: ['Course Shortlisting','Ranking & Budget Matching','Accommodation Support','Pre-Departure Briefings'],
     btn: 'Apply to University', btnHref: 'https://globalgroupofeducationportal.com/student-registration', external: true,
-    img: '/assets/images/uni-guide.jpg', imgRight: false,
+    img: '/assets/images/UNIVERSITY.jpg', imgRight: false,
   },
   {
     num: '03', tag: 'Financial Aid & Grants',
@@ -45,7 +46,7 @@ const aboutCards = [
     desc: 'We partner directly with leading universities in the UK, USA, Canada, and Australia to secure lucrative scholarships for our students, easing the financial path to studying abroad.',
     tags: ['UK Vice-Chancellor Awards','USA Merit Scholarships','Canada Dean Grants','Partial & Full Awards','British Council Scholarships','Erasmus Mundus Awards'],
     btn: 'Find Scholarships', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
-    img: '/assets/images/scholarshipiamge.jpeg', imgRight: true,
+    img: '/assets/images/scolar.jpg', imgRight: true,
   },
   {
     num: '04', tag: 'Visa Excellence',
@@ -54,7 +55,7 @@ const aboutCards = [
     desc: 'Our dedicated team will help you secure your study visa, ensuring flawless CAS & I-20 documentation and thorough mock embassy interview preparation.',
     tags: ['CAS & I-20 Processing','Financial Assessment','Mock Embassy Interviews','98% Approval Track Record'],
     btn: 'Book Visa Consultation', btnHref: 'https://api.whatsapp.com/send/?phone=447586588658&text&type=phone_number&app_absent=0', external: true,
-    img: '/assets/images/rear-view-hispanic-young-woman-man-looking-countries-globe-while-planning-their-trip-abroad-with-travel-agent.jpg', imgRight: false,
+    img: '/assets/images/2196.jpg', imgRight: false,
   },
   {
     num: '05', tag: 'Academic Programs',
@@ -63,7 +64,7 @@ const aboutCards = [
     desc: "Find accredited undergraduate degrees, master's programs, PhD research opportunities, and foundation pathway programs across STEM, Business, Healthcare, and Humanities.",
     tags: ['Foundation / Certificate','Diploma / Adv. Diploma','Undergraduate / Bachelors','Pre-Master & Postgraduate','Research / PhD Degrees','Pre-Sessional Programs'],
     btn: 'Open Course Finder', btnHref: 'https://globalgroupofeducationportal.com/courseFinder/index?access=pass', external: true,
-    img: '/assets/images/explore-acdmic-course.jpg', imgRight: true,
+    img: '/assets/images/exploreacdmic.jpg', imgRight: true,
   },
   {
     num: '06', tag: 'Global Gateways',
@@ -72,7 +73,7 @@ const aboutCards = [
     desc: 'Choose from premier global education hubs offering post-study work rights, high standard of living, world-renowned faculties, and welcoming multicultural environments.',
     tags: ['Australia','Canada','Europe','New Zealand','UAE','United Kingdom','United States'],
     btn: 'Explore Destinations', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
-    img: '/assets/images/top-study-dest.jpg', imgRight: false,
+    img: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=70', imgRight: false,
   },
   {
     num: '07', tag: 'Global Impact',
@@ -81,7 +82,7 @@ const aboutCards = [
     desc: 'We provide complete admissions services for Australia, Canada, Europe, UK, USA and other countries, guiding thousands of ambitious students into rewarding international careers.',
     tags: ['21+ Countries','639+ Universities','63541+ Courses','5570+ Students','100+ Trusted Partners'],
     btn: 'Start Free Assessment', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
-    img: '/assets/images/we-help.jpg', imgRight: true,
+    img: '/assets/images/43346.jpg', imgRight: true,
   },
 ];
 
@@ -90,13 +91,13 @@ export default function HomePage() {
     <div>
 
       {/* ── 1. Hero ── */}
-      <section className="relative overflow-hidden bg-[#0b1a37]" style={{ minHeight: '650px' }}>
+      <section className="relative bg-[#0b1a37]" style={{ minHeight: '550px' }}>
         <div className="absolute inset-0 z-0">
           <HeroVideo />
           <div className="absolute inset-0"
             style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.85) 0%, rgba(8,15,36,0.60) 40%, rgba(8,15,36,0.0) 65%, rgba(8,15,36,0.0) 100%)' }} />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 py-20 flex items-center" style={{ minHeight: '650px' }}>
+        <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-10 py-20 flex items-center" style={{ minHeight: '550px' }}>
           <div className="max-w-lg">
             <p className="hero-text-1 text-sm font-semibold text-white mb-3">
               Welcome and <span className="text-white font-semibold" style={{ textDecoration: 'underline', textDecorationColor: '#fbaf1b', textUnderlineOffset: '4px', textDecorationThickness: '2px' }}>Join Us for Success</span>
@@ -123,8 +124,8 @@ export default function HomePage() {
 
       {/* ── 2. About Slider ── */}
       <section id="about-section" className="bg-white py-8">
-        <div className="px-0" style={{ width: '100%' }}>
-          <div className="text-center mb-6 px-6 lg:px-10">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
+          <div className="text-center mb-6">
             <span className="inline-flex items-center gap-2 text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-5" style={{ backgroundColor: 'rgba(255,255,255,1)' }}>
               <GraduationCap size={13} /> Complete Education Ecosystem
             </span>
@@ -135,17 +136,17 @@ export default function HomePage() {
               Discover our comprehensive admissions services, accredited academic degree pathways, and certified guidance designed to turn your study abroad aspirations into global success.
             </p>
           </div>
-          {/* Sticky scroll cards */}
-          <div className="sticky-cards flex flex-col gap-0 px-6 lg:px-10">
+          {/* Cards */}
+          <div className="flex flex-col gap-8">
             {aboutCards.map((c, i) => (
               <div key={c.num}
-                style={{ top: '80px', zIndex: i + 1, marginBottom: i === aboutCards.length - 1 ? '0' : '-1px' }}
-                className={`sticky border border-[#fbaf1b]/30 bg-white shadow-sm mb-4
-                  ${c.num === '01' ? 'block' : 'px-6 lg:px-10 py-8 lg:py-10 flex flex-col lg:flex-row gap-10 items-center'}`}>
+                style={{ top: '80px', zIndex: i + 1 }}
+                className={`sticky rounded-xl border border-gray-100 bg-white shadow-md
+                  ${c.num === '01' ? 'block' : 'p-8 lg:p-10 flex flex-col lg:flex-row gap-10 items-center'}`}>
 
                 {/* ── Card 01: text left, images right ── */}
                 {c.num === '01' && (
-                  <div className="flex flex-col lg:flex-row gap-8 items-center px-6 lg:px-10 py-8 lg:py-10">
+                  <div className="flex flex-col lg:flex-row gap-8 items-center p-8 lg:p-10">
                     {/* Text left */}
                     <div className="flex-1">
                       <h3 className="text-3xl font-semibold text-[#0b1a37] leading-tight mb-2 whitespace-pre-line">{c.title}</h3>
@@ -191,11 +192,8 @@ export default function HomePage() {
                   <>
                     {/* Image left */}
                     {!c.imgRight && (
-                      <div className="flex-shrink-0 relative w-full lg:w-[45%]">
-                        <div className="relative" style={{ height: '320px' }}>
-                          <img src={c.img} alt={c.tag}
-                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-                        </div>
+                      <div className="flex-shrink-0 relative w-full lg:w-[45%] rounded-xl overflow-hidden" style={{ height: '320px' }}>
+                        <Image src={c.img} alt={c.tag} fill className="object-cover transition-transform duration-500 hover:scale-105" sizes="45vw" />
                       </div>
                     )}
 
@@ -224,11 +222,8 @@ export default function HomePage() {
 
                     {/* Image right */}
                     {c.imgRight && (
-                      <div className="flex-shrink-0 relative w-full lg:w-[45%]">
-                        <div className="relative" style={{ height: '320px' }}>
-                          <img src={c.img} alt={c.tag}
-                            className="w-full h-full object-cover transition-transform duration-500 hover:scale-105" />
-                        </div>
+                      <div className="flex-shrink-0 relative w-full lg:w-[45%] rounded-xl overflow-hidden" style={{ height: '320px' }}>
+                        <Image src={c.img} alt={c.tag} fill className="object-cover transition-transform duration-500 hover:scale-105" sizes="45vw" />
                       </div>
                     )}
                   </>

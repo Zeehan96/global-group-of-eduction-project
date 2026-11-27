@@ -2,32 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  .max-w-7xl {
-    max-width: 100% !important;
-  }
-}
-
 @layer base {
   html, body, * {
     font-family: 'Rubik', sans-serif !important;
     box-sizing: border-box;
   }
   html {
-    min-width: 1280px;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  html::-webkit-scrollbar {
+    display: none;
   }
   body {
     @apply bg-white text-gray-900;
-  }
-  html {
-    scroll-behavior: smooth;
   }
   main {
     animation: pageEnter 0.35s ease forwards;
   }
   @keyframes pageEnter {
-    from { opacity: 0; transform: translateY(-16px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to   { opacity: 1; }
   }
 
   /* Hero text animations */

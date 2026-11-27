@@ -26,7 +26,7 @@ export default function PageBanner({
       )}
 
       {/* Content */}
-      <div className={`relative z-10 max-w-7xl mx-auto px-6 lg:px-10 flex items-center ${videoHero ? '' : 'justify-center text-center'}`}
+      <div className={`relative z-10 max-w-[1200px] mx-auto px-6 lg:px-10 flex items-center ${videoHero ? '' : 'justify-center text-center'}`}
         style={{ minHeight: videoHero ? '500px' : 'auto', paddingTop: videoHero ? '0' : '56px', paddingBottom: videoHero ? '0' : '56px' }}>
         <div className={videoHero ? 'max-w-lg' : ''}>
 
