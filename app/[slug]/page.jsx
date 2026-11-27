@@ -95,8 +95,9 @@ const destinationData = {
     banner: '/assets/images/study-incountry-images/studysutralia.jpeg',
     flag: '🇦🇺',
     country: 'Australia',
-    desc: 'Turn Your Australian Education Dreams into Reality. Australia is one of the world\'s most popular destinations for international students, offering internationally recognised qualifications, innovative teaching methods and a multicultural learning environment.',
+    desc: 'Your Gateway to World-Class Education in Australia — Expert Guidance from Application to Arrival.',
     article: [
+      { type: 'para', text: 'Turn Your Australian Education Dreams into Reality. Australia is one of the world\'s most popular destinations for international students, offering internationally recognised qualifications, innovative teaching methods and a multicultural learning environment.' },
       { type: 'para', text: 'Whether you want to pursue an undergraduate degree, postgraduate qualification or professional programme, Australia offers diverse academic opportunities to help you achieve your educational and career ambitions.' },
     ],
     highlights: [],
@@ -300,11 +301,11 @@ export default async function DynamicSlugPage({ params }) {
             className="w-full h-full object-cover"
             fetchPriority="high"
           />
-          <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.70)' }}></div>
+          <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.45)' }}></div>
         </div>
         <div className="absolute inset-0 z-10 flex flex-col items-center justify-center px-6 lg:px-10">
           <h1 style={{ fontSize: '44px', lineHeight: '54px', fontWeight: '700', color: '#fff' }}>{formattedTitle}</h1>
-          {(destInfo?.desc || page.meta_description) && (
+          {(destInfo?.desc && slug !== 'study-in-australia') && (
             <p style={{ fontSize: '14px', color: '#fff', fontWeight: '400' }} className="max-w-2xl mx-auto mt-4 leading-relaxed">{destInfo?.desc || page.meta_description}</p>
           )}
         </div>
@@ -339,7 +340,7 @@ export default async function DynamicSlugPage({ params }) {
       )}
 
       {/* Content — hide if contentCards exist */}
-      {!destInfo?.contentCards?.length && (
+      {(!destInfo?.contentCards?.length || destInfo?.article?.length > 0) && (
       <section className="bg-white py-10">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row gap-8">
@@ -401,7 +402,7 @@ export default async function DynamicSlugPage({ params }) {
 
       {/* Content Cards — Australia style */}
       {destInfo?.contentCards?.length > 0 && (
-        <section className="bg-gray-50 py-14">
+        <section className="bg-white py-6">
           <div className="max-w-[1200px] mx-auto px-6 lg:px-10 flex flex-col gap-8">
             {destInfo.contentCards.map((card, i) => (
               <div key={i}
