@@ -1,14 +1,14 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Smile, BookOpen, Gift, FileCheck } from 'lucide-react';
+import { Globe, Building2, GraduationCap, Smile, Handshake } from 'lucide-react';
 
 const stats = [
-  { Icon: Smile,     val: 21,    suffix: '+', label: 'Countries' },
-  { Icon: BookOpen,  val: 639,   suffix: '+', label: 'Universities' },
-  { Icon: Gift,      val: 63541, suffix: '+', label: 'Courses' },
-  { Icon: FileCheck, val: 5570,  suffix: '+', label: 'Students Satisfaction' },
-  { Icon: Smile,     val: 100,   suffix: '+', label: 'Trusted Partners' },
+  { Icon: Globe,         val: 21,    suffix: '+', label: 'Countries' },
+  { Icon: Building2,     val: 639,   suffix: '+', label: 'Universities' },
+  { Icon: GraduationCap, val: 63541, suffix: '+', label: 'Courses' },
+  { Icon: Smile,         val: 5570,  suffix: '+', label: 'Students Satisfaction' },
+  { Icon: Handshake,     val: 100,   suffix: '+', label: 'Trusted Partners' },
 ];
 
 function CountUp({ target, suffix, duration = 2000 }) {
@@ -57,9 +57,10 @@ export default function StatsSection() {
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
         <div className="grid grid-cols-2 lg:grid-cols-5 gap-8 text-center">
-          {stats.map((s) => (
+          {stats.map((s, i) => (
             <div key={s.label} className="flex flex-col items-center gap-3">
-              <div className="w-14 h-14 rounded-xl bg-[#162544]/80 flex items-center justify-center transition-all duration-300 hover:rounded-full hover:bg-[#fbaf1b]">
+              <div className="w-14 h-14 rounded-xl bg-[#162544]/80 flex items-center justify-center transition-all duration-300 hover:rounded-full hover:bg-[#fbaf1b]"
+                style={{ animation: `iconBounce 1.6s ease-in-out ${i * 0.2}s infinite` }}>
                 <s.Icon size={26} className="text-white" />
               </div>
               <CountUp target={s.val} suffix={s.suffix} />

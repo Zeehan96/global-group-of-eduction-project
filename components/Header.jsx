@@ -13,7 +13,6 @@ const destinations = [
   { label: 'Study in Canada',      href: '/study-in-canada' },
   { label: 'Study in Europe',      href: '/study-in-europe' },
   { label: 'Study in New Zealand', href: '/study-in-new-zealand' },
-  { label: 'Study in UAE',         href: '/study-in-uae' },
   { label: 'Study in UK',          href: '/study-in-uk' },
   { label: 'Study in USA',         href: '/study-in-usa' },
 ];
@@ -70,7 +69,6 @@ export default function Header() {
             {navLink('/', Home, 'Home')}
 
             <a href="https://globalgroupofeducationportal.com/courseFinder/index?access=pass"
-              target="_blank" rel="noreferrer"
               className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold transition-colors text-[#162447] hover:text-[#fbaf1b]">
               <BookOpen size={15} />
               Courses

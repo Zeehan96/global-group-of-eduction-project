@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes iconBounce {
+  0%, 100% { transform: translateY(0); }
+  40%       { transform: translateY(-8px); }
+  60%       { transform: translateY(-4px); }
+}
+
 @layer base {
   html, body, * {
     font-family: 'Rubik', sans-serif !important;
@@ -124,13 +130,74 @@
   background-color: #162544;
   z-index: -1;
   transition: height 0.4s ease;
-  border-radius: inherit;
+  border-radius: 0;
 }
 .service-card:hover::before {
   height: 100%;
 }
 .service-card:hover {
   transform: translateY(-6px);
+}
+
+/* ── Portal service-block styles ── */
+.service-block {
+  position: relative;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+.service-block .icon-box {
+  position: relative;
+  left: 25px;
+  top: 5px;
+  height: 70px;
+  width: 80px;
+  background: #091529;
+  color: #e8edfa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  transition: all 300ms ease;
+  z-index: 1;
+  border-radius: 10px 10px 2px 2px;
+  box-shadow: 6px -7px 0px -1px #1b3560;
+  border-left: 2px solid rgba(255,255,255,0.12);
+}
+
+.service-block .inner-box {
+  position: relative;
+  background: rgba(8, 18, 40, 0.85);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 30px 25px 25px 25px;
+  z-index: 0;
+  transition: all 300ms ease;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.service-block .inner-box::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background-color: #1a4a8a;
+  z-index: -1;
+  transition: height 0.4s ease;
+}
+
+.service-block:hover .inner-box::before {
+  height: 100%;
+}
+
+.service-block:hover .inner-box {
+  transform: translateY(-3px);
+}
+
+.service-block:hover .inner-box p {
+  color: #ffffff;
 }
 
 @layer base {

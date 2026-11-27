@@ -46,7 +46,7 @@ function ContactForm() {
         </div>
         <div>
           <label className="block text-sm font-semibold text-gray-700 mb-1">Phone Number</label>
-          <input type="tel" required placeholder="+44 ..."
+          <input type="tel" required placeholder="Enter phone number"
             value={formData.phone} onChange={e => setFormData({ ...formData, phone: e.target.value })}
             className="w-full bg-gray-100 border border-gray-200 rounded-md px-4 py-3 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#162544]" />
         </div>
@@ -130,14 +130,39 @@ export default function ContactUsPage() {
           {/* Office Maps */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-            {/* Pakistan Office */}
+            {/* UK Office — LEFT */}
+            <div className="bg-white rounded-xl border border-[#fbaf1b]/30 shadow-sm overflow-hidden">
+              <div className="px-6 py-5 border-b border-gray-100">
+                <span className="inline-flex items-center text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
+                  United Kingdom
+                </span>
+                <h3 className="text-lg font-bold text-[#0b1a37] mb-2">UK Office</h3>
+                <p className="text-sm text-gray-600 mb-3">126 E Ferry Rd, Canary Wharf Estate, London E14 9FP, United Kingdom.</p>
+                <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
+                  <Mail size={13} className="text-[#fbaf1b]" />
+                  <a href="mailto:london@globalgroupofeducation.com" className="hover:text-[#fbaf1b] transition-colors">london@globalgroupofeducation.com</a>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-gray-600">
+                  <Phone size={13} className="text-[#fbaf1b]" />
+                  <a href="tel:+447586589659" className="hover:text-[#fbaf1b] transition-colors">+44 7586 589659</a>
+                </div>
+              </div>
+              <div className="h-72">
+                <iframe
+                  src="https://maps.google.com/maps?q=126+E+Ferry+Rd,+Canary+Wharf+Estate,+London+E14+9FP,+United+Kingdom&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade" title="UK Office" />
+              </div>
+            </div>
+
+            {/* Pakistan Office — RIGHT */}
             <div className="bg-white rounded-xl border border-[#fbaf1b]/30 shadow-sm overflow-hidden">
               <div className="px-6 py-5 border-b border-gray-100">
                 <span className="inline-flex items-center text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
                   Pakistan
                 </span>
                 <h3 className="text-lg font-bold text-[#0b1a37] mb-2">Pakistan Office</h3>
-                <p className="text-sm text-gray-600 mb-3">Building no 278, High Street, Sahiwal, Punjab, Pakistan.</p>
+                <p className="text-sm text-gray-600 mb-3">Building No 278, High Street, Sahiwal, Punjab, Pakistan.</p>
                 <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
                   <Mail size={13} className="text-[#fbaf1b]" />
                   <a href="mailto:pakistan@globalgroupofeducation.com" className="hover:text-[#fbaf1b] transition-colors">pakistan@globalgroupofeducation.com</a>
@@ -152,31 +177,6 @@ export default function ContactUsPage() {
                   src="https://maps.google.com/maps?q=Sahiwal,Punjab,Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed"
                   width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade" title="Pakistan Office" />
-              </div>
-            </div>
-
-            {/* UK Office */}
-            <div className="bg-white rounded-xl border border-[#fbaf1b]/30 shadow-sm overflow-hidden">
-              <div className="px-6 py-5 border-b border-gray-100">
-                <span className="inline-flex items-center text-[#b87c00] text-[11px] font-semibold tracking-widest uppercase px-3 py-1 rounded-md mb-3" style={{ backgroundColor: 'rgba(251,175,27,0.08)' }}>
-                  United Kingdom
-                </span>
-                <h3 className="text-lg font-bold text-[#0b1a37] mb-2">UK Office</h3>
-                <p className="text-sm text-gray-600 mb-3">Level 18, 40 Bank Street, Canary Wharf, London, E14 5NR, United Kingdom.</p>
-                <div className="flex items-center gap-2 text-sm text-gray-600 mb-1">
-                  <Mail size={13} className="text-[#fbaf1b]" />
-                  <a href="mailto:london@globalgroupofeducation.com" className="hover:text-[#fbaf1b] transition-colors">london@globalgroupofeducation.com</a>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-gray-600">
-                  <Phone size={13} className="text-[#fbaf1b]" />
-                  <a href="tel:+447586589659" className="hover:text-[#fbaf1b] transition-colors">+44 7586 589659</a>
-                </div>
-              </div>
-              <div className="h-72">
-                <iframe
-                  src="https://maps.google.com/maps?q=40+Bank+Street,Canary+Wharf,London,E14+5NR&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade" title="UK Office" />
               </div>
             </div>
 

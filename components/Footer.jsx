@@ -61,7 +61,6 @@ const footerLinks = {
     { label: 'Study in Canada',    href: '/study-in-canada' },
     { label: 'Study in Europe',    href: '/study-in-europe' },
     { label: 'Study in New Zealand', href: '/study-in-new-zealand' },
-    { label: 'Study in UAE',       href: '/study-in-uae' },
     { label: 'Study in UK',        href: '/study-in-uk' },
     { label: 'Study in USA',       href: '/study-in-usa' },
   ],
@@ -188,9 +187,11 @@ export default function Footer() {
             </div>
 
             {/* Address */}
-            <span className="flex items-center gap-2 text-white text-xs font-semibold">
-              <MapPin size={13} className="text-white flex-shrink-0" />
-              126 E Ferry Rd, Canary Wharf Estate, London E14 9FP, United Kingdom
+            <span className="flex items-center gap-2 text-white text-xs font-semibold group cursor-default">
+              <MapPin size={13} className="text-[#fbaf1b] flex-shrink-0" />
+              <span className="transition-colors duration-300 group-hover:text-[#fbaf1b]">
+                126 E Ferry Rd, Canary Wharf Estate, London E14 9FP, United Kingdom
+              </span>
             </span>
 
           </div>

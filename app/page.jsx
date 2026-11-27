@@ -10,10 +10,10 @@ import {
 } from 'lucide-react';
 
 const services = [
-  { Icon: Search,         title: 'University Selection & Guidance',      desc: 'We help you choose the right universities and handle accommodation, travel, and pre-departure preparations for a smooth transition.' },
+  { Icon: Search,         title: 'University Selection & Guidance',      desc: 'We help you choose the right universities, handle accommodation, travel, and pre-departure preparations for a smooth transition.' },
   { Icon: FileText,       title: 'Admissions & Interview Preparation',   desc: 'Our consultants and admissions officers work together to create strong applications and provide top guidance for interview preparation, setting students up for success.' },
-  { Icon: Award,          title: 'Scholarships at Top Universities',     desc: 'We partner with top UK universities to secure scholarships for our students, easing the path to studying abroad.' },
-  { Icon: Plane,          title: 'Visa & Immigration Support',           desc: 'Our dedicated team at headquarters will help you secure your study visa for your chosen field, ensuring a smooth application process.' },
+  { Icon: Award,          title: 'Scholarships at Top Universities',     desc: 'We partner with top universities worldwide to secure scholarships for our students, easing the path to studying abroad.' },
+  { Icon: Plane,          title: 'Visa & Immigration Support',           desc: 'Our dedicated visa team will help you secure your study visa for your chosen destination, ensuring a smooth application process.' },
   { Icon: Languages,      title: 'Test Preparation',                     desc: 'With our comprehensive approach to test preparation, we help you achieve optimal scores on language proficiency tests such as the IELTS, LanguageCert, PTE, and others.' },
   { Icon: Building2,      title: 'Post-Study Work Opportunities',        desc: 'We provide expert guidance on post-study work opportunities through our global network, helping you maximise your career prospects after graduating.' },
   { Icon: BookMarked,     title: 'Accommodation Support',                desc: 'Assistance in finding safe, affordable student accommodation near your university campus for a comfortable student life.' },
@@ -34,7 +34,7 @@ const aboutCards = [
     num: '02', tag: 'University Selection',
     title: 'UNIVERSITY SELECTION &\nGUIDANCE',
     sub: 'Tailored Academic Pathways for Every Student',
-    desc: 'We help you choose the right universities and handle accommodation, travel, and pre-departure preparations for a smooth transition to higher education abroad.',
+    desc: 'We help you choose the right universities, handle accommodation, travel, and pre-departure preparations for a smooth transition to higher education abroad.',
     tags: ['Course Shortlisting','Ranking & Budget Matching','Accommodation Support','Pre-Departure Briefings'],
     btn: 'Apply to University', btnHref: 'https://globalgroupofeducationportal.com/student-registration', external: true,
     img: '/assets/images/UNIVERSITY.jpg', imgRight: false,
@@ -43,8 +43,8 @@ const aboutCards = [
     num: '03', tag: 'Financial Aid & Grants',
     title: 'SCHOLARSHIPS AT TOP\nUNIVERSITIES',
     sub: 'Merit & Need-Based Funding up to £10,000',
-    desc: 'We partner directly with leading universities in the UK, USA, Canada, and Australia to secure lucrative scholarships for our students, easing the financial path to studying abroad.',
-    tags: ['UK Vice-Chancellor Awards','USA Merit Scholarships','Canada Dean Grants','Partial & Full Awards','British Council Scholarships','Erasmus Mundus Awards'],
+    desc: 'We partner directly with leading universities in Australia, Canada, the UK, and USA to secure lucrative scholarships for our students, easing the financial path to studying abroad.',
+    tags: ['British Council Scholarships','Canada Dean Grants','Erasmus Mundus Awards','Partial & Full Awards','UK Vice-Chancellor Awards','USA Merit Scholarships'],
     btn: 'Find Scholarships', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: '/assets/images/scolar.jpg', imgRight: true,
   },
@@ -61,17 +61,17 @@ const aboutCards = [
     num: '05', tag: 'Academic Programs',
     title: 'EXPLORE ACADEMIC\nCOURSES',
     sub: 'Undergraduate, Postgraduate & PhD Degrees',
-    desc: "Find accredited undergraduate degrees, master's programs, PhD research opportunities, and foundation pathway programs across STEM, Business, Healthcare, and Humanities.",
-    tags: ['Foundation / Certificate','Diploma / Adv. Diploma','Undergraduate / Bachelors','Pre-Master & Postgraduate','Research / PhD Degrees','Pre-Sessional Programs'],
+    desc: "Find accredited foundation pathway programs, undergraduate degrees, master's programs, and PhD research opportunities across STEM, Business, Healthcare, and Humanities.",
+    tags: ['Foundation / Certificate','Diploma / Adv. Diploma','Undergraduate / Bachelors','Pre-Master & Postgraduate','Pre-Sessional Programs','Research / PhD Degrees'],
     btn: 'Open Course Finder', btnHref: 'https://globalgroupofeducationportal.com/courseFinder/index?access=pass', external: true,
-    img: '/assets/images/exploreacdmic.jpg', imgRight: true,
+    img: '/assets/images/exploreacdmic.jpg', imgRight: true, imgPos: 'object-top',
   },
   {
     num: '06', tag: 'Global Gateways',
     title: 'TOP STUDY\nDESTINATIONS',
-    sub: 'Australia, Canada, Europe, New Zealand, UAE, UK, USA & Worldwide',
+    sub: 'Australia, Canada, Europe, New Zealand, UK, USA & Worldwide',
     desc: 'Choose from premier global education hubs offering post-study work rights, high standard of living, world-renowned faculties, and welcoming multicultural environments.',
-    tags: ['Australia','Canada','Europe','New Zealand','UAE','United Kingdom','United States'],
+    tags: ['Australia','Canada','Europe','New Zealand','United Kingdom','United States'],
     btn: 'Explore Destinations', btnHref: 'https://globalgroupofeducationportal.com/login', external: true,
     img: 'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&q=70', imgRight: false,
   },
@@ -193,7 +193,7 @@ export default function HomePage() {
                     {/* Image left */}
                     {!c.imgRight && (
                       <div className="flex-shrink-0 relative w-full lg:w-[45%] rounded-xl overflow-hidden" style={{ height: '320px' }}>
-                        <Image src={c.img} alt={c.tag} fill className="object-cover transition-transform duration-500 hover:scale-105" sizes="45vw" />
+                        <Image src={c.img} alt={c.tag} fill className={`${c.imgPos || 'object-center'} object-cover transition-transform duration-500 hover:scale-105`} sizes="45vw" />
                       </div>
                     )}
 
@@ -223,7 +223,7 @@ export default function HomePage() {
                     {/* Image right */}
                     {c.imgRight && (
                       <div className="flex-shrink-0 relative w-full lg:w-[45%] rounded-xl overflow-hidden" style={{ height: '320px' }}>
-                        <Image src={c.img} alt={c.tag} fill className="object-cover transition-transform duration-500 hover:scale-105" sizes="45vw" />
+                        <Image src={c.img} alt={c.tag} fill className={`${c.imgPos || 'object-center'} object-cover transition-transform duration-500 hover:scale-105`} sizes="45vw" />
                       </div>
                     )}
                   </>
