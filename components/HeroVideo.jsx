@@ -7,7 +7,7 @@ export default function HeroVideo() {
       loop
       muted
       playsInline
-      className="absolute inset-0 w-full h-full object-cover object-center brightness-75"
+      className="absolute inset-0 w-full h-full object-cover object-center brightness-95"
     >
       <source src="/assets/videos/video.mp4" type="video/mp4" />
     </video>

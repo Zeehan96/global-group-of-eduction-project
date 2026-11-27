@@ -92,31 +92,50 @@ const destinationData = {
     ],
   },
   'study-in-australia': {
-    banner: '/assets/images/study-incountry-images/study-in-aus.jpg',
+    banner: '/assets/images/study-incountry-images/studysutralia.jpeg',
     flag: '🇦🇺',
     country: 'Australia',
-    desc: 'Experience world-class education at ANU, University of Melbourne & Sydney. GGE guides you through your Subclass 500 student visa and post-study work rights.',
+    desc: 'Turn Your Australian Education Dreams into Reality. Australia is one of the world\'s most popular destinations for international students, offering internationally recognised qualifications, innovative teaching methods and a multicultural learning environment.',
     article: [
-      { type: 'heading', text: 'Why Study in Australia?' },
-      { type: 'para', text: 'Australia is the third most popular destination for international students in the English-speaking world. Home to the Group of Eight (Go8) universities — including the Australian National University, University of Melbourne, and University of Sydney — Australia offers world-class education with globally recognised qualifications.' },
-      { type: 'para', text: 'Australian universities are known for their strong research output, practical learning approach, and industry connections. The country invests heavily in education infrastructure, ensuring students have access to cutting-edge laboratories, libraries, and digital resources.' },
-      { type: 'heading', text: 'Student Life in Australia' },
-      { type: 'para', text: 'Australia\'s lifestyle is a major draw for international students. With a sunny climate, stunning natural landscapes, vibrant cities like Sydney, Melbourne, Brisbane, and Perth, and a relaxed, friendly culture, students enjoy an exceptional quality of life. Australia is consistently ranked among the safest and most livable countries in the world.' },
-      { type: 'para', text: 'International students can work up to 48 hours per fortnight during term time and unlimited hours during holidays. This provides excellent opportunities to gain work experience and supplement living costs.' },
-      { type: 'heading', text: 'Post-Study Work Rights' },
-      { type: 'para', text: 'Australia\'s Temporary Graduate visa (Subclass 485) allows international graduates to live and work in Australia after completing their studies. The duration ranges from 2 to 4 years depending on the level and location of study. Students who study in regional Australia may qualify for extended post-study work rights.' },
-      { type: 'heading', text: 'Scholarships & Funding' },
-      { type: 'para', text: 'The Australia Awards Scholarships, funded by the Australian Government, are among the most prestigious scholarships available for students from developing countries. Many universities also offer excellence scholarships, international merit awards, and equity bursaries. GGE will help you identify and apply for the right opportunities.' },
-      { type: 'heading', text: 'Australia Student Visa (Subclass 500)' },
-      { type: 'para', text: 'To study in Australia, you need a Student Visa (Subclass 500). Requirements include an enrolment confirmation (CoE), proof of English proficiency (IELTS/PTE), financial capacity evidence, Overseas Student Health Cover (OSHC), and a genuine student statement (GTE). GGE provides complete visa application support to ensure a strong, well-documented submission.' },
+      { type: 'para', text: 'Whether you want to pursue an undergraduate degree, postgraduate qualification or professional programme, Australia offers diverse academic opportunities to help you achieve your educational and career ambitions.' },
     ],
-    highlights: [
-      { icon: GraduationCap, title: 'Group of Eight',             desc: 'ANU, University of Melbourne, Sydney and world top-50 unis.' },
-      { icon: FileCheck,     title: 'Post-Study Work Rights',     desc: '2–4 years post-study work visa depending on qualification.' },
-      { icon: Star,          title: 'Australia Awards',           desc: 'Government scholarships and university-funded opportunities.' },
-      { icon: Briefcase,     title: 'Career Prospects',           desc: 'Mining, healthcare, engineering and IT sectors highly demanded.' },
-      { icon: Globe,         title: 'Lifestyle',                  desc: 'Beautiful climate, beaches and world-class student cities.' },
-      { icon: Users,         title: 'GGE Guidance',               desc: 'Full support for Australian student visa (Subclass 500).' },
+    highlights: [],
+    contentCards: [
+      {
+        title: 'Why Choose Australia?',
+        img: '/assets/images/australia-images/why-choose-aus.jpeg',
+        text: 'Australia is a leading destination for international students, offering globally recognised qualifications, high academic standards and innovative learning environments. Its universities combine academic excellence with practical learning, research opportunities and industry-focused programmes across a wide range of disciplines.\n\nWith a multicultural society, modern educational facilities and excellent student support services, Australia provides an enriching environment for academic growth, personal development and international exposure, helping students build a strong foundation for their future careers.',
+      },
+      {
+        title: 'Top Universities in Australia',
+        img: '/assets/images/australia-images/top-uni.jpeg',
+        text: 'Australia is home to some of the world\'s leading universities, recognised for their academic excellence, innovative research and internationally respected qualifications. Institutions such as The University of Melbourne, The University of Sydney, Monash University, UNSW Sydney, Australian National University and The University of Queensland attract students from around the world.\n\nOther renowned institutions, including RMIT University, Deakin University, Curtin University, Griffith University, Macquarie University and the University of Technology Sydney, offer diverse academic programmes across multiple disciplines.\n\nWith study options in business, information technology, engineering, healthcare, education and scientific research, students can explore a wide range of opportunities to match their academic backgrounds, career aspirations and future goals.',
+      },
+      {
+        title: 'Campus and Community',
+        img: '/assets/images/australia-images/campus-and-comm.jpeg',
+        text: 'Australian universities offer vibrant campus environments that promote academic excellence, collaboration and personal development. With modern libraries, advanced research facilities and well-equipped learning spaces, students benefit from an engaging educational experience.\n\nBeyond academics, students can participate in cultural events, sports, student societies and social activities, providing opportunities to build friendships, explore new interests and connect with diverse communities. Dedicated student support services also help international students settle into university life with confidence.',
+      },
+      {
+        title: 'Life in Australia',
+        img: '/assets/images/australia-images/life-in-aus.jpeg',
+        text: 'Australia offers an exciting lifestyle, combining modern cities, cultural diversity and beautiful natural surroundings. From the vibrant atmosphere of Sydney and Melbourne to the relaxed lifestyle of Adelaide, Brisbane and Perth, students can enjoy a variety of experiences while pursuing their education.\n\nWith its multicultural communities, beautiful beaches, recreational activities and modern facilities, Australia provides an enriching living experience. International students can explore different accommodation options, access public transportation and, if eligible, undertake part-time employment in accordance with their visa conditions. Living in Australia encourages independence, personal growth and valuable international exposure.',
+      },
+      {
+        title: 'Language Preparation',
+        img: '/assets/images/australia-images/lang-prepartaion.jpeg',
+        text: 'English language proficiency is an important requirement for admission to many Australian universities. Students can demonstrate their English language ability through recognised tests, depending on their chosen university and programme.\n\nCommonly accepted English language qualifications include:\n\n• IELTS Academic: An internationally recognised English proficiency test assessing listening, reading, writing and speaking.\n\n• PTE Academic: A computer-based English language test widely accepted by Australian universities.\n\n• LanguageCert: Accepted by certain universities and education providers, subject to their individual requirements.',
+      },
+      {
+        title: 'Scholarships in Australia',
+        img: '/assets/images/australia-images/Scholarship.jpeg',
+        text: 'Studying in Australia is an investment in your future, and scholarships can help make your education more affordable. Australian universities and education providers offer various scholarship opportunities for eligible international students based on academic achievements, outstanding performance, chosen fields of study and research potential.\n\nThese opportunities may include merit-based awards, international student scholarships, tuition fee reductions and postgraduate research funding. Scholarship values, eligibility criteria and application deadlines vary between institutions, and some awards require a separate application.\n\nAt Global Group of Education (GGE), we help students explore available scholarships and identify suitable opportunities based on their academic profiles, study preferences and financial circumstances.',
+      },
+      {
+        title: 'Our Services',
+        img: '/assets/images/australia-images/our-services-aus.jpeg',
+        text: 'At GGE, our counsellors guide you at every stage of your Australian study journey.\n\n• Consultation & University Selection\n\n• Admission & Document Assistance\n\n• Scholarship & English Language Guidance\n\n• SOP & Student Visa Guidance\n\n• Pre-Departure Assistance',
+      },
     ],
   },
   'study-in-hungary': {
@@ -292,7 +311,7 @@ export default async function DynamicSlugPage({ params }) {
       </div>
 
       {/* Destination highlights cards */}
-      {destInfo && (
+      {destInfo && destInfo.highlights.length > 0 && (
         <section className="bg-gray-50 py-10">
           <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
             <div className="text-center mb-8">
@@ -301,7 +320,6 @@ export default async function DynamicSlugPage({ params }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {destInfo.highlights.map((h) => (
                 <div key={h.title} className="group relative bg-white rounded-xl border border-[#fbaf1b]/20 p-5 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all overflow-hidden">
-                  {/* bg image on hover */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"
                     style={{ backgroundImage: `url(${destInfo.banner})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
                     <div className="absolute inset-0" style={{ background: 'rgba(8,15,36,0.75)' }}></div>
@@ -320,7 +338,8 @@ export default async function DynamicSlugPage({ params }) {
         </section>
       )}
 
-      {/* Content */}
+      {/* Content — hide if contentCards exist */}
+      {!destInfo?.contentCards?.length && (
       <section className="bg-white py-10">
         <div className="max-w-[1200px] mx-auto px-6 lg:px-10">
           <div className="flex flex-col lg:flex-row gap-8">
@@ -375,9 +394,46 @@ export default async function DynamicSlugPage({ params }) {
           </div>
         </div>
       </section>
+      )}
 
       {/* Testimonials */}
       {/* <Testimonials /> */}
+
+      {/* Content Cards — Australia style */}
+      {destInfo?.contentCards?.length > 0 && (
+        <section className="bg-gray-50 py-14">
+          <div className="max-w-[1200px] mx-auto px-6 lg:px-10 flex flex-col gap-8">
+            {destInfo.contentCards.map((card, i) => (
+              <div key={i}
+                style={{ top: '80px', zIndex: i + 1 }}
+                className={`sticky flex flex-col lg:flex-row items-stretch bg-white rounded-xl border border-gray-100 shadow-md overflow-hidden ${i % 2 !== 0 ? '' : 'lg:flex-row-reverse'}`}>
+                {/* Image */}
+                <div className="flex-shrink-0 w-full lg:w-[42%] p-4 overflow-hidden rounded-xl">
+                  <img src={card.img} alt={card.title} className="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-[1.03]" style={{ minHeight: '280px', maxHeight: '320px' }} />
+                </div>
+                {/* Text */}
+                <div className="flex-1 min-w-0 flex flex-col justify-center p-8">
+                  <h3 className="text-[#0b1a37] font-bold text-lg mb-3">{card.title}</h3>
+                  {card.text.split('\n\n').map((para, j) => (
+                    para.startsWith('•') ? (
+                      <ul key={j} className="mb-2 flex flex-col gap-1.5">
+                        {para.split('\n').filter(l => l.trim()).map((line, k) => (
+                          <li key={k} className="flex items-start gap-2 text-sm text-gray-600 leading-relaxed">
+                            <span className="text-[#fbaf1b] font-bold mt-0.5 flex-shrink-0">•</span>
+                            <span>{line.replace(/^•\s*/, '')}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p key={j} className="text-gray-500 text-sm leading-relaxed mb-2">{para}</p>
+                    )
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
     </div>
   );

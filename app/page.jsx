@@ -95,7 +95,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-0">
           <HeroVideo />
           <div className="absolute inset-0"
-            style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.85) 0%, rgba(8,15,36,0.60) 40%, rgba(8,15,36,0.0) 65%, rgba(8,15,36,0.0) 100%)' }} />
+            style={{ background: 'linear-gradient(to right, rgba(8,15,36,0.70) 0%, rgba(8,15,36,0.40) 40%, rgba(8,15,36,0.0) 65%, rgba(8,15,36,0.0) 100%)' }} />
         </div>
         <div className="relative z-10 max-w-[1200px] mx-auto px-6 lg:px-10 py-20 flex items-center" style={{ minHeight: '550px' }}>
           <div className="max-w-lg">
