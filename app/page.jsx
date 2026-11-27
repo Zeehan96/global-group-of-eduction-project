@@ -174,9 +174,8 @@ export default function HomePage() {
                           <img src="/assets/images/about-us-img2.png" alt="Graduate"
                             className="w-full h-full object-cover object-top" />
                         </div>
-                        <div className="rounded-xl relative overflow-hidden flex items-center justify-center" style={{ flex: '2',
-                          backgroundImage: 'url(/assets/images/about-us-image3.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#e2e8f0' }}>
-                          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.18)' }}></div>
+                        <div className="rounded-xl relative overflow-hidden flex items-center justify-center" style={{ flex: '2', backgroundColor: '#ffffff', border: '2px solid #e5e7eb' }}>
+                          <img src="/assets/images/about-us-image3.png" alt="Experience" className="absolute inset-0 w-full h-full object-cover" />
                           <div className="relative z-10 text-center">
                             <p className="blink-10 text-4xl font-black text-[#0b1a37] leading-none">10</p>
                             <p className="text-[9px] font-bold text-[#0b1a37] mt-1 tracking-wide uppercase">Years of<br/>Experience</p>
